@@ -21,13 +21,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-08)
 
 **Core value:** User completes onboarding, gets a personalized checklist with step-by-step guides including city-specific links — instantly actionable
-**Current focus:** Phase 1 — Foundation & Onboarding
+**Current focus:** Phase 2 — Home + Aufgaben (Checkliste & Zeitplan)
 
 ## Current Position
 
-Phase: 1 of 4 (Shell, Brand & Onboarding)
-Plan: 4 of 4 in current phase — COMPLETE
-Status: Phase 1 complete — all 4 plans executed
+Phase: 2 of 4 (Home + Aufgaben)
+Plan: 0 of ? in current phase
+Status: Phase 1 complete — advancing to Phase 2
 Last activity: 2026-05-08
 
 Progress: [██████████] 25%

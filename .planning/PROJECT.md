@@ -284,5 +284,13 @@ Anbieter (Strom, Internet, Versicherungen) werden direkt in der App über eine W
 
 This document evolves at phase transitions and milestone boundaries.
 
+## Validated Requirements (Phase 1)
+
+Phase 1 complete 2026-05-08. Requirements validated: ONB-01, ONB-02, ONB-03, ONB-04, UX-01, UX-03, UX-04.
+- Next.js 16 + Tailwind v4 + shadcn Radix scaffolded, brand tokens live
+- 5-step onboarding flow → celebration → main app shell functional
+- Zustand store with localStorage persistence proven (18 tests passing)
+- 3 code review issues to fix before Phase 2 ship: reset() mutable ref, splash redirect check, confetti RAF cleanup
+
 ---
-*Last updated: 2026-05-08 — full review: navigation restructured, Gen-Z UX added, brand system defined, Moodboard removed*
+*Last updated: 2026-05-08 — Phase 1 complete. Phase 2 next: Home dashboard + Aufgaben checklist.*
