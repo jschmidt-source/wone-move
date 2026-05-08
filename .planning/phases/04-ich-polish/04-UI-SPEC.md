@@ -1,7 +1,8 @@
 ---
 phase: 4
 slug: ich-polish
-status: draft
+status: approved
+reviewed_at: 2026-05-08
 shadcn_initialized: true
 preset: base-nova
 created: 2026-05-08
@@ -57,7 +58,7 @@ Source: `src/app/globals.css` (Plus Jakarta Sans), established in Phase 1.
 | Role | Size | Weight | Line Height |
 |------|------|--------|-------------|
 | Body | 14px | 400 (regular) | 1.5 |
-| Label | 14px | 600 (semibold) | 1.4 |
+| Label | 14px | 700 (bold) | 1.4 |
 | Heading | 20px | 700 (bold) | 1.2 |
 | Display | 28px | 700 (bold) | 1.15 |
 
@@ -67,9 +68,10 @@ Additional type tokens specific to this phase:
 |------|------|--------|-------------|-------|
 | Chat bubble | 14px | 400 | 1.5 | Chatbot message text |
 | Caption | 12px | 400 | 1.4 | Profil sub-info ("Von Hamburg → München · 15. Juni 2026 · 42 qm"), document timestamps, premium price detail |
-| Paywall price | 24px | 700 | 1.1 | €2,99 / €19,99 figures on paywall |
 
-Weights in use: 400 (regular), 600 (semibold), 700 (bold). Maximum 3 weights per mobile legibility constraint.
+Paywall price figures (€2,99, €19,99): use Display role (28px/700, `#646efb`). No separate token.
+
+Weights in use: 400 (regular), 700 (bold). Maximum 2 weights per mobile legibility constraint.
 
 ---
 
@@ -198,7 +200,7 @@ Existing screens modified in Phase 4:
 
 - Renders as 3rd card slot in doc list
 - Background: `#ffffff`, border: `#d2d5fc` dashed 2px
-- Content: lucide `Lock` icon (20px, `#646efb`) + "Unlimitiert mit Premium speichern" (14px/600) + "Upgrade →" link text (`#646efb`)
+- Content: lucide `Lock` icon (20px, `#646efb`) + "Unlimitiert mit Premium speichern" (14px/700) + "Upgrade →" link text (`#646efb`)
 - No modal on tap — navigates directly to `/ich/premium`
 
 ### Werbebanner (Aufgaben)
@@ -220,7 +222,7 @@ Existing screens modified in Phase 4:
 - Two-column table: Free | Premium
 - 8 feature rows (from ROADMAP.md): Checkliste, Anleitungen, Zeitplan, KI Chatbot (3 Chats), KI Chatbot (Unlimited), Dokumentenspeicher (2), Dokumentenspeicher (Unlimited), PDF-Export
 - Check marks: lucide `Check` (`#646efb`) for included, lucide `X` (`#ef4444`) for excluded
-- Pricing: €2,99/Monat · €19,99/Jahr (24px/700 `#646efb`)
+- Pricing: €2,99/Monat · €19,99/Jahr — Display role (28px/700, `#646efb`)
 
 ### Disabled Settings Rows
 
