@@ -5,7 +5,7 @@
 ### Onboarding
 
 - [ ] **ONB-01**: User can complete a personalized onboarding questionnaire (6–8 questions covering: Umzugsdatum, PLZ der neuen Wohnung, Haushaltsgröße, Budget, Wohnungsgröße, Transportart, Priorität)
-- [ ] **ONB-02**: User sees a personalized checklist immediately after completing the questionnaire
+- [x] **ONB-02**: User sees a personalized checklist immediately after completing the questionnaire
 - [x] **ONB-03**: Questionnaire answers are persisted locally so the user doesn't lose progress on reload
 - [ ] **ONB-04**: User can skip already-completed items during onboarding ("Hast du bereits?") and they appear pre-checked
 
@@ -46,9 +46,9 @@
 
 ### Navigation & UX
 
-- [ ] **UX-01**: App has a bottom navigation bar with: Checkliste, Zeitplan, Anleitungen, Good to Know
+- [x] **UX-01**: App has a bottom navigation bar with: Checkliste, Zeitplan, Anleitungen, Good to Know
 - [ ] **UX-02**: Search bar allows searching across checklists and guides
-- [ ] **UX-03**: App is fully mobile-responsive (320px–768px primary target)
+- [x] **UX-03**: App is fully mobile-responsive (320px–768px primary target)
 - [x] **UX-04**: Color palette matches brand: primary #646efb, dark #1c2242, background #f6f7f7
 
 ---
@@ -83,11 +83,11 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | ONB-01 | Phase 1 | Pending |
-| ONB-02 | Phase 1 | Pending |
+| ONB-02 | Phase 1 | Complete |
 | ONB-03 | Phase 1 | Complete (Plan 1) |
 | ONB-04 | Phase 1 | Pending |
-| UX-01 | Phase 1 | Pending |
-| UX-03 | Phase 1 | Pending |
+| UX-01 | Phase 1 | Complete |
+| UX-03 | Phase 1 | Complete |
 | UX-04 | Phase 1 | Complete (Plan 1) |
 | CHK-01 | Phase 2 | Pending |
 | CHK-02 | Phase 2 | Pending |

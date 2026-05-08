@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: executing
+stopped_at: Plan 3 complete — Onboarding steps 1–5 dynamic route + 4 reusable components
+last_updated: "2026-05-08T12:26:38.086Z"
+last_activity: 2026-05-08
+progress:
+  total_phases: 4
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 4
+  percent: 18
+---
+
 # Project State
 
 ## Project Reference
@@ -10,15 +26,16 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 1 of 4 (Shell, Brand & Onboarding)
-Plan: 3 of 4 in current phase
-Status: In progress — Plans 1–3 complete, Plan 4 pending
-Last activity: 2026-05-08 — Plan 3 executed (Onboarding steps 1–5 dynamic route + components)
+Plan: 4 of 4 in current phase — COMPLETE
+Status: Phase 1 complete — all 4 plans executed
+Last activity: 2026-05-08
 
-Progress: [███░░░░░░░] 18%
+Progress: [██████████] 25%
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 2
 - Average duration: 8 min
 - Total execution time: 0.3 hours
@@ -27,11 +44,12 @@ Progress: [███░░░░░░░] 18%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-shell-brand-onboarding | 3/4 | 25 min | 8 min |
+| 01-shell-brand-onboarding | 4/4 | 27 min | 7 min |
 
 **Recent Trend:**
-- Last 5 plans: Plan 1 (12 min), Plan 2 (5 min), Plan 3 (8 min)
-- Trend: Consistent
+
+- Last 5 plans: Plan 1 (12 min), Plan 2 (5 min), Plan 3 (8 min), Plan 4 (2 min)
+- Trend: Consistent, accelerating
 
 *Updated after each plan completion*
 
@@ -55,6 +73,8 @@ Recent decisions affecting current work:
 - Plan 01-03: Dynamic route for all 5 onboarding steps — single page.tsx reads step from useParams
 - Plan 01-03: Local state flushed to Zustand only on Weiter tap (prevents partial store writes during editing)
 - Plan 01-03: PLZ validation added (T-01-06) — regex /^\d{5}$/, inline error, Weiter blocked if invalid
+- Plan 01-04: BottomNav is Client Component (usePathname); (main)/layout.tsx stays Server Component — Next.js handles RSC/Client boundary automatically
+- Plan 01-04: Lucide strokeWidth 2.5/1.8 variation approximates filled vs outlined icon spec
 
 ### Pending Todos
 
@@ -73,5 +93,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Plan 3 complete — Onboarding steps 1–5 dynamic route + 4 reusable components
-Resume file: .planning/phases/01-shell-brand-onboarding/01-03-SUMMARY.md
+Stopped at: Phase 1 complete — Celebration screen + BottomNav + placeholder tabs. Advance to Phase 2.
+Resume file: .planning/phases/01-shell-brand-onboarding/01-04-SUMMARY.md
