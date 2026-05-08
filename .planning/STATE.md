@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planned
-stopped_at: Phase 2 complete — all 5 plans shipped. Advance to Phase 3 (Verträge + Entdecken).
+stopped_at: Phase 3 context gathered. Ready to plan Phase 3 (Verträge + Entdecken).
 last_updated: "2026-05-08T15:00:00Z"
 last_activity: 2026-05-08
 progress:
@@ -106,5 +106,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 2 complete — all 5 plans delivered. Kostenrechner + Übergabeprotokoll pages live. Ready for Phase 3 (Verträge + Entdecken).
-Resume file: .planning/phases/02-home-aufgaben/02-05-SUMMARY.md
+Stopped at: Phase 3 context gathered (2026-05-08). All 4 gray areas discussed: Versicherungen-Subkategorien, Entdecken Hub-Layout, Verträge Sign-up-Flow, Entdecken Search.
+Resume file: .planning/phases/03-vertraege-entdecken/03-CONTEXT.md
