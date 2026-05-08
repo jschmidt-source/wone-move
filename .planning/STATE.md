@@ -10,11 +10,11 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 1 of 4 (Shell, Brand & Onboarding)
-Plan: 2 of 4 in current phase
-Status: In progress — Plans 1–2 complete, Plans 3–4 pending
-Last activity: 2026-05-08 — Plan 2 executed (Splash + Welcome screens)
+Plan: 3 of 4 in current phase
+Status: In progress — Plans 1–3 complete, Plan 4 pending
+Last activity: 2026-05-08 — Plan 3 executed (Onboarding steps 1–5 dynamic route + components)
 
-Progress: [██░░░░░░░░] 12%
+Progress: [███░░░░░░░] 18%
 
 ## Performance Metrics
 
@@ -27,11 +27,11 @@ Progress: [██░░░░░░░░] 12%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-shell-brand-onboarding | 2/4 | 17 min | 8 min |
+| 01-shell-brand-onboarding | 3/4 | 25 min | 8 min |
 
 **Recent Trend:**
-- Last 5 plans: Plan 1 (12 min), Plan 2 (5 min)
-- Trend: Accelerating
+- Last 5 plans: Plan 1 (12 min), Plan 2 (5 min), Plan 3 (8 min)
+- Trend: Consistent
 
 *Updated after each plan completion*
 
@@ -52,6 +52,9 @@ Recent decisions affecting current work:
 - Plan 01-01: Next.js 16.2.6 scaffolded (latest stable); plan specified 15 but 16 is fully compatible
 - Plan 01-02: h-dvh used for full dynamic viewport height on mobile (handles iOS Safari browser chrome)
 - Plan 01-02: Arbitrary Tailwind values (text-[28px], h-[52px]) for pixel-exact UI spec compliance
+- Plan 01-03: Dynamic route for all 5 onboarding steps — single page.tsx reads step from useParams
+- Plan 01-03: Local state flushed to Zustand only on Weiter tap (prevents partial store writes during editing)
+- Plan 01-03: PLZ validation added (T-01-06) — regex /^\d{5}$/, inline error, Weiter blocked if invalid
 
 ### Pending Todos
 
@@ -70,5 +73,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Plan 2 complete — Splash screen + Welcome screen
-Resume file: .planning/phases/01-shell-brand-onboarding/01-02-SUMMARY.md
+Stopped at: Plan 3 complete — Onboarding steps 1–5 dynamic route + 4 reusable components
+Resume file: .planning/phases/01-shell-brand-onboarding/01-03-SUMMARY.md

@@ -60,7 +60,7 @@ Four phases build a complete clickable showcase prototype. Each phase adds a wor
 Plans:
 - [x] 01-PLAN-1.md — Project scaffold: Next.js 15, shadcn init, brand tokens, Zustand store, OnboardingData types
 - [x] 01-PLAN-2.md — Splash screen (auto-redirect 1500ms) + Welcome screen (headline, CTA)
-- [ ] 01-PLAN-3.md — Onboarding steps 1–5 dynamic route with store integration
+- [x] 01-PLAN-3.md — Onboarding steps 1–5 dynamic route with store integration
 - [ ] 01-PLAN-4.md — Celebration screen (confetti + summary) + Bottom Navigation + placeholder tabs
 
 ### Phase 2: Home + Aufgaben (Checkliste & Zeitplan)
@@ -298,7 +298,7 @@ Plans:
 
 | Phase | Status | Completed |
 |-------|--------|-----------|
-| 1. Shell, Brand & Onboarding | In progress (2/4 plans) | 2026-05-08 |
+| 1. Shell, Brand & Onboarding | In progress (3/4 plans) | 2026-05-08 |
 | 2. Home + Aufgaben | Not started | - |
 | 3. Verträge + Entdecken | Not started | - |
 | 4. Ich + Polish + Kosteneinschätzung | Not started | - |
