@@ -135,6 +135,13 @@ Plans:
   6. Übergabeprotokoll zeigt Zimmer-Tabs + Zustands-Toggles + Foto-Slots
   7. Fortschrittsbalken und Kategorie-Counts aktualisieren sich visuell beim Abhaken
 **UI hint**: yes
+**Plans**: 5 plans
+Plans:
+- [ ] 02-01-PLAN.md — Data foundation: types, TASKS (32 items), filterTasks, GUIDES, checklistStore, shadcn primitives
+- [ ] 02-02-PLAN.md — Home Dashboard: greeting, countdown, progress bar, Nächste Aufgabe, tips, quick-actions, deadlines
+- [ ] 02-03-PLAN.md — Aufgaben tab: Checkliste/Zeitplan toggle, Must-Do, 5 categories, FAB + AddItemSheet, 5 timeline buckets
+- [ ] 02-04-PLAN.md — Anleitungen browser + dynamic /anleitungen/[slug] with full Ummeldung guide
+- [ ] 02-05-PLAN.md — Kostenrechner (reactive) + Übergabeprotokoll (5 Zimmer-Tabs, condition toggles, photo slots)
 
 ### Phase 3: Verträge + Entdecken
 **Goal**: The monetization tab (Verträge) and the knowledge tab (Entdecken) are fully built — users can go through the full provider comparison and in-app "sign-up" flow, and access all guides, FAQ, tips, and emergency contacts
