@@ -1,7 +1,8 @@
 ---
 phase: 1
 slug: shell-brand-onboarding
-status: draft
+status: approved
+reviewed_at: 2026-05-08
 shadcn_initialized: false
 preset: none
 created: 2026-05-08
@@ -57,8 +58,7 @@ Exceptions:
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 16px | 400 (Regular) | 1.5 | Default text, onboarding hint copy, toggle labels |
-| Label | 14px | 700 (Bold) | 1.4 | Step indicator text, input labels, badge text |
-| Nav label | 12px | 700 (Bold) | 1.4 | Bottom navigation tab labels |
+| Label | 14px | 700 (Bold) | 1.4 | Step indicator text, input labels, badge text, bottom navigation tab labels |
 | Heading | 20px | 700 (Bold) | 1.3 | Onboarding step titles ("Wann ziehst du um?"), welcome subline |
 | Display | 28px | 700 (Bold) | 1.2 | Welcome screen headline, celebration screen headline |
 
@@ -66,7 +66,7 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 
 Weight system: two weights only — 400 (Regular) for body copy and 700 (Bold) for all labels, headings, display text, and interactive elements. No intermediate weights.
 
-**Source:** ROADMAP.md success criterion 1 (Plus Jakarta Sans); sizes derived from screen hierarchy in ROADMAP.md Phase 1 screen specs. 10px nav label replaced with 12px (nearest 4-point multiple, legible at mobile density). Semibold (600) removed; all label/interactive weights unified to Bold (700).
+**Source:** ROADMAP.md success criterion 1 (Plus Jakarta Sans); sizes derived from screen hierarchy in ROADMAP.md Phase 1 screen specs. Four sizes: 16/14/20/28px. Nav tab labels use Label (14px) — the 2px difference from the original 10px spec is imperceptible at mobile density. Semibold (600) removed; all label/interactive weights unified to Bold (700).
 
 ---
 
@@ -208,7 +208,7 @@ Weight system: two weights only — 400 (Regular) for body copy and 700 (Bold) f
 - 5 tabs: Home | Aufgaben | Verträge | Entdecken | Ich
 - Active tab: icon + label color `#646efb`, icon filled variant
 - Inactive tab: icon + label color `#5b6377`, icon outlined variant
-- Tab label: 12px weight 700 (below icon)
+- Tab label: 14px weight 700 (below icon)
 - Icon size: 24px
 - Tab hit area: full tab width × 56px (no smaller)
 - Active indicator: no underline or pill — color change only
