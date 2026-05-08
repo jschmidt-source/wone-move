@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 0 of 5 in current phase
-Status: Phase 3 planned — 5 plans in 3 waves. Ready to execute.
+Plan: 1 of 5 in current phase
+Status: Phase 3 in progress — 03-01 complete (data foundation). Wave 2 plans ready.
 Last activity: 2026-05-08
 
-Progress: [████████████] 29%
+Progress: [██████████████] 33%
 
 ## Performance Metrics
 
@@ -88,6 +88,9 @@ Recent decisions affecting current work:
 - Plan 02-05: Base UI Slider onValueChange receives typed value directly (number | number[]) — cast to number[] for array usage
 - Plan 02-05: Base UI Tabs active state uses data-active:* selectors (not Radix's data-[state=active]:*) — matches base-nova preset
 - Plan 02-05: ConditionToggle clicking active button returns state to null — allows clearing a selection
+- Plan 03-01: preisProMonat als string ('8,90') statt number — deutsches Dezimalformat direkt in Daten, kein Formatter nötig
+- Plan 03-01: VertragHubKategorie (4: strom/internet/telefon/versicherungen) von VertragKategorie (5: inkl. haftpflicht/hausrat) getrennt — Hub zeigt Versicherungen als eine Kachel, Vergleichs-Screens tabben intern
+- Plan 03-01: Kein 'use client' im vertraegeStore — folgt onboardingStore-Pattern, Stores sind framework-agnostisch auf Modulebene
 
 ### Pending Todos
 
@@ -106,5 +109,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 UI-SPEC approved (2026-05-08). UI design contract covers Verträge Hub, 4 provider comparison screens, Abschluss-Modal, Entdecken Hub, Search overlay, FAQ, Spartipps, Notfallkontakte, Adressänderungen.
-Resume file: .planning/phases/03-vertraege-entdecken/03-UI-SPEC.md
+Stopped at: Phase 3 Plan 01 complete (2026-05-08). Data foundation: 7 files (types, 5 lib, 1 store). Wave 2 plans can execute.
+Resume file: .planning/phases/03-vertraege-entdecken/03-02-PLAN.md
