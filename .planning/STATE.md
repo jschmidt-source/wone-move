@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planned
-stopped_at: Phase 2 planned — 5 plans in 3 waves, ready to execute
-last_updated: "2026-05-08T13:00:00.000Z"
+status: in_progress
+stopped_at: Phase 2 Plan 1 complete — data foundation (types, tasks, guides, store, shadcn)
+last_updated: "2026-05-08T13:58:30Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 0
-  completed_plans: 4
-  percent: 18
+  completed_plans: 5
+  percent: 22
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 2 of 4 (Home + Aufgaben)
-Plan: 0 of ? in current phase
-Status: Phase 2 planned — 5 plans (3 waves), ready to execute
+Plan: 1 of 5 in current phase
+Status: Phase 2 Plan 1 complete — data foundation delivered (Wave 1)
 Last activity: 2026-05-08
 
-Progress: [██████████] 25%
+Progress: [███████████] 28%
 
 ## Performance Metrics
 
@@ -75,6 +75,10 @@ Recent decisions affecting current work:
 - Plan 01-03: PLZ validation added (T-01-06) — regex /^\d{5}$/, inline error, Weiter blocked if invalid
 - Plan 01-04: BottomNav is Client Component (usePathname); (main)/layout.tsx stays Server Component — Next.js handles RSC/Client boundary automatically
 - Plan 01-04: Lucide strokeWidth 2.5/1.8 variation approximates filled vs outlined icon spec
+- Plan 02-01: checklistStore uses flat state (no data wrapper) vs onboardingStore — different shapes per plan spec
+- Plan 02-01: filterTasks returns {tasks, preChecked} tuple; callers apply preChecked to store
+- Plan 02-01: GUIDES keyed by slug string for direct URL routing to /anleitungen/[slug]
+- Plan 02-01: shadcn base-nova style uses @base-ui/react (not Radix UI) — matches existing project components
 
 ### Pending Todos
 
@@ -93,5 +97,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 1 complete — Celebration screen + BottomNav + placeholder tabs. Advance to Phase 2.
-Resume file: .planning/phases/01-shell-brand-onboarding/01-04-SUMMARY.md
+Stopped at: Phase 2 Plan 1 complete — data foundation (types/tasks/guides/store/shadcn). Wave 1 done.
+Resume file: .planning/phases/02-home-aufgaben/02-01-SUMMARY.md

@@ -11,24 +11,24 @@
 
 ### Checkliste
 
-- [ ] **CHK-01**: Checklist is organized into categories: Organisatorisches, Verträge, Versicherungen, Einrichtung, Finanzen
-- [ ] **CHK-02**: Each checklist item can be checked off and state persists in localStorage
+- [x] **CHK-01**: Checklist is organized into categories: Organisatorisches, Verträge, Versicherungen, Einrichtung, Finanzen
+- [x] **CHK-02**: Each checklist item can be checked off and state persists in localStorage
 - [ ] **CHK-03**: A "Must-Do" section is pinned at the top of the checklist (highest-priority items)
-- [ ] **CHK-04**: User can add custom checklist items
-- [ ] **CHK-05**: Checklist is filtered/tailored based on onboarding answers (e.g., no car → no KFZ-Ummeldung)
+- [x] **CHK-04**: User can add custom checklist items
+- [x] **CHK-05**: Checklist is filtered/tailored based on onboarding answers (e.g., no car → no KFZ-Ummeldung)
 
 ### Schritt-für-Schritt Anleitungen
 
 - [ ] **GUIDE-01**: Each checklist item links to a step-by-step guide (accessible via click)
-- [ ] **GUIDE-02**: Each guide explains the task, required documents, and approximate time needed
-- [ ] **GUIDE-03**: Guides for authority-related tasks (Ummeldung, Rundfunkbeitrag) include city-specific links based on user's PLZ
+- [x] **GUIDE-02**: Each guide explains the task, required documents, and approximate time needed
+- [x] **GUIDE-03**: Guides for authority-related tasks (Ummeldung, Rundfunkbeitrag) include city-specific links based on user's PLZ
 - [ ] **GUIDE-04**: Guides are also accessible as a standalone section (sorted by category), independent of the checklist
 - [ ] **GUIDE-05**: Guide for apartment handover (Übergabeprotokoll) with photo checklist is included
 
 ### Timeline
 
-- [ ] **TIME-01**: App generates a timeline showing when each task should ideally be done (relative to move date)
-- [ ] **TIME-02**: Timeline groups tasks by: 4+ Wochen vorher, 2–4 Wochen vorher, 1 Woche vorher, Am Umzugstag, Danach
+- [x] **TIME-01**: App generates a timeline showing when each task should ideally be done (relative to move date)
+- [x] **TIME-02**: Timeline groups tasks by: 4+ Wochen vorher, 2–4 Wochen vorher, 1 Woche vorher, Am Umzugstag, Danach
 - [ ] **TIME-03**: Browser push notification can be enabled for upcoming deadlines (opt-in)
 
 ### Fortschritt

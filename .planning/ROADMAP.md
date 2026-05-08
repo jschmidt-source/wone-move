@@ -137,7 +137,7 @@ Plans:
 **UI hint**: yes
 **Plans**: 5 plans
 Plans:
-- [ ] 02-01-PLAN.md — Data foundation: types, TASKS (32 items), filterTasks, GUIDES, checklistStore, shadcn primitives
+- [x] 02-01-PLAN.md — Data foundation: types, TASKS (32 items), filterTasks, GUIDES, checklistStore, shadcn primitives
 - [ ] 02-02-PLAN.md — Home Dashboard: greeting, countdown, progress bar, Nächste Aufgabe, tips, quick-actions, deadlines
 - [ ] 02-03-PLAN.md — Aufgaben tab: Checkliste/Zeitplan toggle, Must-Do, 5 categories, FAB + AddItemSheet, 5 timeline buckets
 - [ ] 02-04-PLAN.md — Anleitungen browser + dynamic /anleitungen/[slug] with full Ummeldung guide
@@ -306,6 +306,6 @@ Plans:
 | Phase | Status | Completed |
 |-------|--------|-----------|
 | 1. Shell, Brand & Onboarding | Complete (4/4 plans) | 2026-05-08 |
-| 2. Home + Aufgaben | Not started | - |
+| 2. Home + Aufgaben | In progress (1/5 plans) | - |
 | 3. Verträge + Entdecken | Not started | - |
 | 4. Ich + Polish + Kosteneinschätzung | Not started | - |
