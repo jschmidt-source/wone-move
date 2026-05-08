@@ -11,7 +11,7 @@ Four phases build a complete clickable showcase prototype. Each phase adds a wor
 ## Phases
 
 - [x] **Phase 1: Shell, Brand & Onboarding** — App scaffolding, design system, splash, 5-step onboarding flow, celebration screen, bottom navigation
-- [ ] **Phase 2: Home + Aufgaben (Checkliste & Zeitplan)** — Dashboard, checklist with all categories, timeline toggle, step-by-step guide (Ummeldung), Übergabeprotokoll screen, progress
+- [x] **Phase 2: Home + Aufgaben (Checkliste & Zeitplan)** — Dashboard, checklist with all categories, timeline toggle, step-by-step guide (Ummeldung), Übergabeprotokoll screen, progress ✓ 2026-05-08
 - [ ] **Phase 3: Verträge + Entdecken** — White-label provider comparison, FAQ/tips/emergency contacts, Kostenrechner, Adressänderungen
 - [ ] **Phase 4: Ich + Polish + Kosteneinschätzung** — Profile, KI Chatbot, Dokumentenspeicher, Premium Paywall, empty state, final polish, cost estimate document
 

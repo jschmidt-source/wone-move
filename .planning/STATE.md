@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-stopped_at: Phase 2 Plan 5 complete — Kostenrechner reactive page + Übergabeprotokoll with 5 Zimmer-Tabs, ConditionToggle, PhotoSlot. Phase 2 fully complete.
-last_updated: "2026-05-08T14:27:00Z"
+status: planned
+stopped_at: Phase 2 complete — all 5 plans shipped. Advance to Phase 3 (Verträge + Entdecken).
+last_updated: "2026-05-08T15:00:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 2
   total_plans: 0
-  completed_plans: 8
-  percent: 29
+  completed_plans: 9
+  percent: 50
 ---
 
 # Project State
@@ -21,13 +21,13 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-08)
 
 **Core value:** User completes onboarding, gets a personalized checklist with step-by-step guides including city-specific links — instantly actionable
-**Current focus:** Phase 2 — Home + Aufgaben (Checkliste & Zeitplan)
+**Current focus:** Phase 3 — Verträge + Entdecken
 
 ## Current Position
 
-Phase: 2 of 4 (Home + Aufgaben)
-Plan: 5 of 5 in current phase (Phase 2 complete)
-Status: Phase 2 complete — all 5 plans delivered. Kostenrechner + Übergabeprotokoll (Wave 3 final) complete.
+Phase: 3 of 4 (Verträge + Entdecken)
+Plan: 0 of ? in current phase
+Status: Phase 2 complete — all 5 plans delivered. Ready for Phase 3.
 Last activity: 2026-05-08
 
 Progress: [████████████] 29%
