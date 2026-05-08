@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 1 of 5 in current phase
-Status: Phase 3 in progress — 03-01 complete (data foundation). Wave 2 plans ready.
+Plan: 2 of 5 in current phase
+Status: Phase 3 in progress — 03-02 complete (Verträge UI). Wave 2 complete (03-02 done). 03-03 next.
 Last activity: 2026-05-08
 
 Progress: [██████████████] 33%
@@ -91,6 +91,10 @@ Recent decisions affecting current work:
 - Plan 03-01: preisProMonat als string ('8,90') statt number — deutsches Dezimalformat direkt in Daten, kein Formatter nötig
 - Plan 03-01: VertragHubKategorie (4: strom/internet/telefon/versicherungen) von VertragKategorie (5: inkl. haftpflicht/hausrat) getrennt — Hub zeigt Versicherungen als eine Kachel, Vergleichs-Screens tabben intern
 - Plan 03-01: Kein 'use client' im vertraegeStore — folgt onboardingStore-Pattern, Stores sind framework-agnostisch auf Modulebene
+- Plan 03-02: ProviderCard badge absolut top-right; Empfohlen hat Priorität über Partnerangebot (mutually exclusive)
+- Plan 03-02: Filter-Pill-Sortierung ist rein visuell (kein List-Reordering) — Prototyp-Spec
+- Plan 03-02: Versicherungen Hub-Kachel mapped auf /vertraege/versicherungen (D-01); markComplete('versicherungen') gilt für beide Tabs
+- Plan 03-02: onAbschliessen() ist No-Op-Stub in allen Vergleichsseiten — AbschlussSheet kommt in Plan 03-03
 
 ### Pending Todos
 
@@ -109,5 +113,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 Plan 01 complete (2026-05-08). Data foundation: 7 files (types, 5 lib, 1 store). Wave 2 plans can execute.
-Resume file: .planning/phases/03-vertraege-entdecken/03-02-PLAN.md
+Stopped at: Phase 3 Plan 02 complete (2026-05-08). Vertraege UI: 3 components + 5 pages (hub replaced + 4 comparison screens). 03-03 next (AbschlussSheet).
+Resume file: .planning/phases/03-vertraege-entdecken/03-03-PLAN.md

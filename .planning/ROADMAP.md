@@ -227,7 +227,7 @@ Plans:
 **Plans**: 5 plans
 Plans:
 - [x] 03-01-PLAN.md — Data foundation: types, mock data (anbieter/faq/spartipps/notfallkontakte/adressaenderungen), vertraegeStore
-- [ ] 03-02-PLAN.md — Verträge Hub + 4 comparison screens (Strom/Internet/Telefon/Versicherungen with Haftpflicht/Hausrat tabs) + ProviderCard/FilterPillRow/VertraegeKachel components
+- [x] 03-02-PLAN.md — Verträge Hub + 4 comparison screens (Strom/Internet/Telefon/Versicherungen with Haftpflicht/Hausrat tabs) + ProviderCard/FilterPillRow/VertraegeKachel components
 - [ ] 03-03-PLAN.md — AbschlussSheet (multi-step bottom sheet, form → success inline) wired into all 4 comparison screens
 - [ ] 03-04-PLAN.md — Entdecken Hub (sticky search bar + 5 horizontal-scroll sections) + SearchOverlay (autocomplete + categorized results)
 - [ ] 03-05-PLAN.md — Entdecken sub-screens: FAQ accordion, Spartipps, Notfallkontakte (tap-to-call), Adressänderungen (15-checkbox local state)
@@ -314,5 +314,5 @@ Plans:
 |-------|--------|-----------|
 | 1. Shell, Brand & Onboarding | Complete (4/4 plans) | 2026-05-08 |
 | 2. Home + Aufgaben | Complete (5/5 plans) | 2026-05-08 |
-| 3. Verträge + Entdecken | In progress (1/5 plans) | - |
+| 3. Verträge + Entdecken | In progress (2/5 plans) | - |
 | 4. Ich + Polish + Kosteneinschätzung | Not started | - |
