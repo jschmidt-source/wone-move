@@ -5,17 +5,20 @@ import { useRouter } from 'next/navigation';
 import { ChevronLeft } from 'lucide-react';
 import { getAnbieterByKategorie, KATEGORIE_META } from '@/lib/anbieter';
 import { useOnboardingStore } from '@/store/onboardingStore';
+import { useVertraegeStore } from '@/store/vertraegeStore';
 import { FilterPillRow } from '@/components/vertraege/FilterPillRow';
 import { ProviderCard } from '@/components/vertraege/ProviderCard';
-
-// AbschlussSheet wiring added in plan 03-03
+import { AbschlussSheet } from '@/components/vertraege/AbschlussSheet';
+import type { Anbieter } from '@/types/vertraege';
 
 const KATEGORIE = 'telefon' as const;
 
 export default function TelefonPage() {
   const router = useRouter();
   const targetPlz = useOnboardingStore((s) => s.data.targetPlz);
+  const markComplete = useVertraegeStore((s) => s.markComplete);
   const [filter, setFilter] = useState<'empfohlen' | 'guenstigste' | 'beliebteste'>('empfohlen');
+  const [selectedAnbieter, setSelectedAnbieter] = useState<Anbieter | null>(null);
 
   const anbieter = getAnbieterByKategorie(KATEGORIE);
   const meta = KATEGORIE_META[KATEGORIE];
@@ -56,11 +59,21 @@ export default function TelefonPage() {
             <ProviderCard
               key={a.id}
               anbieter={a}
-              onAbschliessen={() => {}}
+              onAbschliessen={() => setSelectedAnbieter(a)}
             />
           ))}
         </div>
       </div>
+
+      <AbschlussSheet
+        open={selectedAnbieter !== null}
+        anbieter={selectedAnbieter}
+        onClose={() => setSelectedAnbieter(null)}
+        onComplete={() => {
+          markComplete('telefon');
+          setSelectedAnbieter(null);
+        }}
+      />
     </div>
   );
 }
