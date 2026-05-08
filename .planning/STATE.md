@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 2 Plan 3 complete — Aufgaben tab with Checkliste/Zeitplan toggle, Must-Do, 5 categories, FAB, AddItemSheet, 5 timeline buckets
-last_updated: "2026-05-08T14:25:00Z"
+stopped_at: Phase 2 Plan 4 complete — Anleitungen browser grid + dynamic guide detail page with full Ummeldung content, GuideStepList, mark-done CTA
+last_updated: "2026-05-08T14:12:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 0
-  completed_plans: 7
-  percent: 26
+  completed_plans: 8
+  percent: 29
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 2 of 4 (Home + Aufgaben)
-Plan: 3 of 5 in current phase
-Status: Phase 2 Plan 3 complete — Aufgaben tab (Checkliste + Zeitplan) delivered (Wave 2)
+Plan: 4 of 5 in current phase
+Status: Phase 2 Plan 4 complete — Anleitungen browser + guide detail page delivered (Wave 3)
 Last activity: 2026-05-08
 
-Progress: [███████████] 28%
+Progress: [████████████] 29%
 
 ## Performance Metrics
 
@@ -77,6 +77,9 @@ Recent decisions affecting current work:
 - Plan 01-04: Lucide strokeWidth 2.5/1.8 variation approximates filled vs outlined icon spec
 - Plan 02-01: checklistStore uses flat state (no data wrapper) vs onboardingStore — different shapes per plan spec
 - Plan 02-01: filterTasks returns {tasks, preChecked} tuple; callers apply preChecked to store
+- Plan 02-04: City link rendered only for slug === 'ummeldung' — spec D-09/GUIDE-03 is explicit, not generic cityLink field
+- Plan 02-04: SLUG_TO_TASK_ID mapping co-located in page.tsx (6 entries) — no separate config needed at this scale
+- Plan 02-04: href='#' + e.preventDefault() for city link — T-02-10 open redirect mitigated, prototype scope
 - Plan 02-01: GUIDES keyed by slug string for direct URL routing to /anleitungen/[slug]
 - Plan 02-01: shadcn base-nova style uses @base-ui/react (not Radix UI) — matches existing project components
 - Plan 02-02: Logo placed in welcome header via next/image (h-9, priority) — brand identity without displacing content
@@ -100,5 +103,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 2 Plan 3 complete — Aufgaben tab (toggle, Must-Do, 5 categories, FAB, AddItemSheet, Zeitplan with 5 buckets). Wave 2 continuing.
-Resume file: .planning/phases/02-home-aufgaben/02-03-SUMMARY.md
+Stopped at: Phase 2 Plan 4 complete — Anleitungen browser grid + /anleitungen/[slug] detail page with full Ummeldung guide, GuideStepList, mark-done CTA. Wave 3 continuing.
+Resume file: .planning/phases/02-home-aufgaben/02-04-SUMMARY.md
