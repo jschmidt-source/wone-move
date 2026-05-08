@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 2 of 5 in current phase
-Status: Phase 3 in progress — 03-02 complete (Verträge UI). Wave 2 complete (03-02 done). 03-03 next.
+Plan: 4 of 5 in current phase
+Status: Phase 3 in progress — 03-04 complete (Entdecken Hub). 03-05 next (Entdecken sub-screens).
 Last activity: 2026-05-08
 
 Progress: [██████████████] 33%
@@ -95,6 +95,8 @@ Recent decisions affecting current work:
 - Plan 03-02: Filter-Pill-Sortierung ist rein visuell (kein List-Reordering) — Prototyp-Spec
 - Plan 03-02: Versicherungen Hub-Kachel mapped auf /vertraege/versicherungen (D-01); markComplete('versicherungen') gilt für beide Tabs
 - Plan 03-02: onAbschliessen() ist No-Op-Stub in allen Vergleichsseiten — AbschlussSheet kommt in Plan 03-03
+- Plan 03-04: SearchOverlay nutzt inset-0 full-screen overlay (vereinfachter Prototyp) statt nur unterhalb der Suchleiste
+- Plan 03-04: ADRESSAENDERUNGEN.slice(0,3) zeigt Arbeitgeber/Finanzamt/Krankenkasse — Dateireihenfolge hat Vorrang vor UI-SPEC §7 Beispiel-Listing
 
 ### Pending Todos
 
@@ -113,5 +115,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 Plan 02 complete (2026-05-08). Vertraege UI: 3 components + 5 pages (hub replaced + 4 comparison screens). 03-03 next (AbschlussSheet).
-Resume file: .planning/phases/03-vertraege-entdecken/03-03-PLAN.md
+Stopped at: Phase 3 Plan 04 complete (2026-05-08). Entdecken Hub: 2 components + 1 page (EntdeckenSection, SearchOverlay, hub replaced). 03-05 next (Entdecken sub-screens).
+Resume file: .planning/phases/03-vertraege-entdecken/03-05-PLAN.md
