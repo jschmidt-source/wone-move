@@ -140,7 +140,11 @@ export default function UebergabeprotokollPage() {
         </Tabs>
 
         {/* Export row */}
-        <div className="mt-6 flex h-[52px] items-center justify-between rounded-[12px] border border-[#d2d5fc] bg-white px-4">
+        <button
+          type="button"
+          onClick={() => router.push('/ich/premium')}
+          className="mt-6 flex h-[52px] w-full items-center justify-between rounded-[12px] border border-[#d2d5fc] bg-white px-4"
+        >
           <div className="flex items-center gap-2">
             <Download size={20} color="#5b6377" />
             <span className="text-[14px] font-bold text-foreground">Protokoll exportieren</span>
@@ -151,7 +155,7 @@ export default function UebergabeprotokollPage() {
           >
             Premium
           </span>
-        </div>
+        </button>
       </div>
     </div>
   );
