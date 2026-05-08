@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 1 of 4 (Shell, Brand & Onboarding)
-Plan: 1 of 4 in current phase
-Status: In progress — Plan 1 complete, Plans 2–4 pending
-Last activity: 2026-05-08 — Plan 1 executed (scaffold + types + store)
+Plan: 2 of 4 in current phase
+Status: In progress — Plans 1–2 complete, Plans 3–4 pending
+Last activity: 2026-05-08 — Plan 2 executed (Splash + Welcome screens)
 
-Progress: [█░░░░░░░░░] 6%
+Progress: [██░░░░░░░░] 12%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 12 min
-- Total execution time: 0.2 hours
+- Total plans completed: 2
+- Average duration: 8 min
+- Total execution time: 0.3 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-shell-brand-onboarding | 1/4 | 12 min | 12 min |
+| 01-shell-brand-onboarding | 2/4 | 17 min | 8 min |
 
 **Recent Trend:**
-- Last 5 plans: Plan 1 (12 min)
-- Trend: Baseline established
+- Last 5 plans: Plan 1 (12 min), Plan 2 (5 min)
+- Trend: Accelerating
 
 *Updated after each plan completion*
 
@@ -50,6 +50,8 @@ Recent decisions affecting current work:
 - Plan 01-01: shadcn --defaults flag (Radix/Nova preset) to avoid interactive CLI prompts
 - Plan 01-01: vitest jsdom environment required for Zustand persist (window.localStorage access)
 - Plan 01-01: Next.js 16.2.6 scaffolded (latest stable); plan specified 15 but 16 is fully compatible
+- Plan 01-02: h-dvh used for full dynamic viewport height on mobile (handles iOS Safari browser chrome)
+- Plan 01-02: Arbitrary Tailwind values (text-[28px], h-[52px]) for pixel-exact UI spec compliance
 
 ### Pending Todos
 
@@ -68,5 +70,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Plan 1 complete — scaffold + types + store
-Resume file: .planning/phases/01-shell-brand-onboarding/01-01-SUMMARY.md
+Stopped at: Plan 2 complete — Splash screen + Welcome screen
+Resume file: .planning/phases/01-shell-brand-onboarding/01-02-SUMMARY.md
