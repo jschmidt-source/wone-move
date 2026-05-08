@@ -307,6 +307,12 @@ Plans:
   7. Gesamte App-Navigation hat keine Dead Ends — jeder Screen hat einen Weg zurück
   8. COST-ESTIMATE.md ist vollständig mit allen 3 Szenarien
 **UI hint**: yes
+**Plans**: 4 plans
+Plans:
+- [ ] 04-01-PLAN.md — chatbotStore + /ich Profil screen + /ich/chatbot (3 pre-filled exchanges + paywall) + /ich/dokumente (2 mock docs + Premium-Lock-Card)
+- [ ] 04-02-PLAN.md — /ich/premium (full-screen paywall, no bottom nav) + /ich/einstellungen (push bottom sheet, disabled rows) + /ich/datenschutz + /ich/impressum + Uebergabeprotokoll export patch
+- [ ] 04-03-PLAN.md — Werbebanner above checklist + Empty State (confetti, all tasks done) on /aufgaben
+- [ ] 04-04-PLAN.md — COST-ESTIMATE.md: 3 scenarios x 7 components, Laufende Kosten, Zeitplan, Empfehlung
 
 ## Progress
 
