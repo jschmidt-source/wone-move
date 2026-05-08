@@ -45,14 +45,16 @@ Unchanged from Phase 1. Declared values (multiples of 4 only):
 | 2xl | 48px | Not used in Phase 2 |
 | 3xl | 64px | Bottom navigation safe-area (carried from Phase 1) |
 
-**Phase 2 exceptions:**
-- Checklist item row height: 56px minimum (touch target, same rule as Phase 1 toggle rows)
-- Progress bar height: 8px (not on scale — specific component dimension)
-- Countdown number display: 40px font size — Display-size exception for numeric hero element
-- Horizontal scroll strip (Wusstest du schon?): cards 200px wide, 12px gap between cards
-- Zimmer-Tabs touch area: 44px minimum height
-- Kostenrechner slider thumb: 24px diameter (Radix Slider default, touch-safe)
-- Quick-Action tile height: 72px (3-column layout, text + icon)
+**Phase 2 exceptions (with justifications):**
+- Checklist item row height: 56px minimum — touch target safety (same rule as Phase 1 toggle rows; 56px is the smallest comfortable tap area for list items at mobile density)
+- Progress bar height: 8px — specific component dimension, not a layout spacing value; this is a visual track, not a gap between elements
+- Countdown number display: 40px font size — Display-size exception for numeric hero element (see Typography section)
+- Horizontal scroll strip (Wusstest du schon?): cards 200px wide, 12px gap between cards — 12px used instead of 8px or 16px because the strip is a compact horizontal scroller where 8px feels too tight and 16px wastes the visible peek of the next card; 12px is the tightest value that preserves readable card separation at 200px card width
+- Zimmer-Tabs touch area: 44px minimum height — iOS/Android minimum recommended tap target (44×44px per HIG / Material); tab bars are high-frequency touch targets
+- Kostenrechner slider thumb: 24px diameter (Radix Slider default, touch-safe) — matches Radix UI default; overriding would require custom CSS with no UX benefit
+- Quick-Action tile height: 72px — 3-column layout with centered icon + label; 64px clips the label at 14px with 4px gap; 72px provides 8px breathing room above icon and below label within the column constraint
+- Input and CTA height: 52px — slightly above standard 48px to give input fields and primary CTAs visual weight commensurate with their importance on mobile; also matches shadcn default for comfortable thumb targets
+- FAB clearance: 80px above bottom nav top edge — ensures the last list item is never obscured by both the FAB (56px) and its shadow (12px spread); `padding-bottom: 80px` on content area is the computed clearance value
 
 **Source:** Phase 1 UI-SPEC.md spacing scale; Phase 2 exceptions derived from ROADMAP.md screen specs.
 
@@ -65,11 +67,13 @@ Unchanged from Phase 1. Four sizes, two weights:
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 16px | 400 (Regular) | 1.5 | Dashboard body text, checklist item labels, guide step descriptions, Kostenrechner labels |
-| Label | 14px | 700 (Bold) | 1.4 | Time badges ("~15 Min"), category labels, Zeitplan bucket headers, tab labels, input labels, badge text |
-| Heading | 20px | 700 (Bold) | 1.3 | Dashboard section headers ("Nächste Aufgabe"), checklist category titles, guide screen title, Übergabeprotokoll section headings |
+| Label | 14px | 700 (Bold) | 1.4 | Time badges ("~15 Min"), category labels, Zeitplan bucket headers, tab labels, input labels, badge text, condition toggle button labels, photo slot labels, signature labels, Must-Do badge text, date pills on deadline rows, meta badges on guide detail, min/max slider labels, category label in Anleitungen cards, Premium badge |
+| Heading | 20px | 700 (Bold) | 1.3 | Dashboard section headers ("Nächste Aufgabe"), checklist category titles, guide screen title, Übergabeprotokoll section headings, Zeitplan bucket headers |
 | Display | 28px | 700 (Bold) | 1.2 | Dashboard greeting headline ("Hey Lea") |
 
-**Countdown number:** 40px, weight 700, line-height 1.0 — numeric hero element on Dashboard. Exception to the 4-size rule; used for a single decorative number, not a content role.
+**Countdown number exception:** 40px, weight 700, line-height 1.0 — single decorative numeric callout on the Dashboard Welcome block, non-content role, single location. Not a typographic scale member. Rationale: the countdown number is a standalone hero numeral (e.g. "12") placed adjacent to contextual subline copy; its purpose is visual impact, not reading flow. Equivalent to a stat callout in a marketing card. Declared explicitly here so the executor treats it as an intentional exception, not a bug.
+
+**12px is not used anywhere in Phase 2.** All elements previously considered at 12px (badge text, condition toggle button labels, photo slot labels, signature labels, Must-Do badge text, time badges, date pills, step number numerals, min/max slider labels) use the **Label role (14px)**. The 2px difference is imperceptible at mobile density on these small elements and avoids introducing a fifth size. This mirrors the Phase 1 decision to unify nav tab labels at 14px rather than spec a separate 10px or 11px size.
 
 **Source:** 01-UI-SPEC.md typography table (locked). Countdown exception derived from ROADMAP.md Dashboard screen spec for countdown prominence.
 
@@ -139,7 +143,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 - shadcn `card` component — white background, border-radius 14px, 16px inner padding, border 1px `#d2d5fc`
 - Card header: "Nächste Aufgabe" — 14px weight 700 `#5b6377`
 - Task title: 16px weight 700 `#1c2642`
-- Time badge: "~X Min" — 12px weight 700, `#5b6377` text on `#f6f7f7` pill, 4px vertical / 8px horizontal padding, border-radius 99px
+- Time badge: "~X Min" — 14px weight 700, `#5b6377` text on `#f6f7f7` pill, 4px vertical / 8px horizontal padding, border-radius 99px
 - CTA: "Jetzt erledigen →" — 14px weight 700 `#646efb`, text-only link style, no button border
 - Full card is tappable → navigates to `/anleitungen/ummeldung` (or relevant slug)
 
@@ -157,14 +161,14 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 - 3 tiles in a row, equal width (screen width − 32px) / 3 − 8px gap
 - Tile: white background, border-radius 12px, border 1px `#d2d5fc`, height 72px, centered icon + label below
 - Icon: Lucide, 20px, `#646efb`
-- Label: 12px weight 700 `#1c2642`, centered below icon, 4px gap
+- Label: 14px weight 700 `#1c2642`, centered below icon, 4px gap
 - Tiles: "Verträge" (FileText icon), "Zeitplan" (CalendarDays icon), "Kostenrechner" (Calculator icon)
 - Tap → navigates to respective route
 
 **Upcoming Deadlines strip:**
 - Section label: "Anstehende Fristen" — 14px weight 700 `#5b6377`
 - 2–3 deadline rows, each: horizontal layout, date pill left, task name right
-- Date pill: 12px weight 700, color-coded — orange for "diese Woche", red for "überfällig"
+- Date pill: 14px weight 700, color-coded — orange for "diese Woche", red for "überfällig"
 - Task name: 14px weight 400 `#1c2642`
 - Row height: 44px, separated by `#d2d5fc` 1px divider
 - Mock data: 2–3 items with hardcoded dates offset from moveDate
@@ -183,7 +187,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 - Label: "Entfernung" — 14px weight 700 `#1c2642`
 - Value display: "[X] km" — 16px weight 700 `#646efb`, right of label
 - shadcn `slider` component — range 10–500, step 10, thumb `#646efb`, filled track `#646efb`, unfilled track `#d2d5fc`, track height 4px, thumb diameter 24px
-- Min/max labels: "10 km" / "500 km" — 12px weight 400 `#5b6377` below slider
+- Min/max labels: "10 km" / "500 km" — 14px weight 400 `#5b6377` below slider
 
 **Toggle — Helfer:**
 - Label: "Helfer vorhanden?" — 14px weight 700 `#1c2642`
@@ -227,7 +231,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 - Sticky via `position: sticky; top: 0; z-index: 40`
 
 **Must-Do section (pinned, above categories):**
-- Section header: "Muss erledigt werden" — 14px weight 700 — left; "Must-Do" badge right: red background `#ef4444`, white text 12px weight 700, border-radius 99px, 4px vertical / 8px horizontal padding
+- Section header: "Muss erledigt werden" — 14px weight 700 — left; "Must-Do" badge right: red background `#ef4444`, white text 14px weight 700, border-radius 99px, 4px vertical / 8px horizontal padding
 - 3–5 items (Ummeldung, Stromanbieter wählen, Haftpflichtversicherung abschließen)
 - Each item: see Checklist Item spec below
 - Section background: white card, border-radius 12px, 1px border `#fecaca` (red-200)
@@ -240,7 +244,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
   - Checked: `#646efb` fill, white checkmark SVG inside, scale(1.1) + color transition 150ms ease
   - Tapping a checked item unchecks it (toggle)
 - Title: 16px weight 400 `#1c2642`; when checked: `text-decoration: line-through`, color `#5b6377`
-- Time badge: "~X Min" — 12px weight 700, `#5b6377` on `#f6f7f7` pill, 4px/8px padding, border-radius 99px — below title with 2px gap
+- Time badge: "~X Min" — 14px weight 700, `#5b6377` on `#f6f7f7` pill, 4px/8px padding, border-radius 99px — below title with 2px gap
 - Category dot: 8px diameter circle, category color (see below), left of time badge with 4px gap
 - Arrow (if tappable to guide): Lucide `ChevronRight`, 16px, `#5b6377` — only on items that have a guide
 
@@ -265,6 +269,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 **Eigenen Punkt hinzufügen:**
 - Floating action button (FAB): bottom right, 56px × 56px, background `#646efb`, border-radius 50%, shadow `0 4px 12px rgba(100, 110, 251, 0.3)`, `z-index: 30`
 - Icon: Lucide `Plus`, 24px white
+- `aria-label="Eigenen Punkt hinzufügen"` — required for screen reader accessibility
 - Positioned 16px from right edge, 80px above bottom nav top edge (clear of nav)
 - Tap → opens a bottom sheet (see interaction below)
 - **Add item bottom sheet:**
@@ -273,7 +278,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
   - Title: "Eigenen Punkt hinzufügen" — 16px weight 700 `#1c2642`, 24px from handle
   - Input: shadcn `input`, full-width, 16px padding, placeholder "z.B. Nachsendeauftrag einrichten"
   - Category selector: 5 small pills with category dots (same colors as above), horizontal scroll, tap to select — selected has `#646efb` border, unselected has `#d2d5fc` border
-  - CTA: "Hinzufügen" — full-width, 52px, `#646efb`, white text, border-radius 12px
+  - CTA: "Punkt hinzufügen" — full-width, 52px, `#646efb`, white text, border-radius 12px
   - Dismiss: tap outside or drag down
 
 **Check animation (D-03 — CSS only, no confetti per item):**
@@ -324,7 +329,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 
 **Meta row (below header):**
 - Three badges in a horizontal row: category tag ("Organisatorisches"), time ("~15 Min"), difficulty ("Mittel")
-- Badge: 12px weight 700, `#5b6377` text, `#f6f7f7` background, 4px/8px padding, border-radius 99px, 4px gap between badges
+- Badge: 14px weight 700, `#5b6377` text, `#f6f7f7` background, 4px/8px padding, border-radius 99px, 4px gap between badges
 - Category badge uses category color dot prepended (8px dot)
 
 **Dokumente-Box:**
@@ -335,7 +340,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 
 **Step list:**
 - 4 steps, numbered
-- Step number: 24px × 24px circle, `#646efb` background, white 12px weight 700, flex-shrink 0
+- Step number: 24px × 24px circle, `#646efb` background, white 14px weight 700, flex-shrink 0
 - Step title: 16px weight 700 `#1c2642`
 - Step description: 14px weight 400 `#5b6377`, below title, 4px gap
 - 16px gap between steps
@@ -380,29 +385,28 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 - Each field row: label (16px weight 700 `#1c2642`) left, condition toggle right
 - Row height: 56px, bottom border 1px `#d2d5fc` except last row
 - Condition toggle (3-state, custom — NOT shadcn Switch):
-  - "Gut" button: 68px × 32px, border-radius 8px; selected: `#22c55e` background, white 12px weight 700; unselected: `#f6f7f7` border 1px `#d2d5fc` 12px `#5b6377`
-  - "Mangel" button: same size; selected: `#ef4444` background, white 12px weight 700; unselected: same rest state
+  - "Gut" button: 68px × 32px, border-radius 8px; selected: `#22c55e` background, white 14px weight 700; unselected: `#f6f7f7` border 1px `#d2d5fc` 14px `#5b6377`
+  - "Mangel" button: same size; selected: `#ef4444` background, white 14px weight 700; unselected: same rest state
   - 4px gap between buttons
 - When "Mangel" selected: Freitext input slides in below row (animate height 0 → 48px, 200ms ease):
-  - shadcn `input`, placeholder "Mangel beschreiben...", full-width, 12px font
-- Default state: neither selected (neutral)
+  - shadcn `input`, placeholder "Mangel beschreiben...", full-width, 14px font
 
 **Foto-Slots:**
 - 3 photo slot placeholders per room, arranged in a 3-column grid
 - Each slot: square (width/3 − 8px, aspect ratio 1:1), border 1.5px dashed `#d2d5fc`, border-radius 8px, background `#f6f7f7`
-- Content: Lucide `Camera` 20px `#5b6377` centered + "Foto" 12px `#5b6377` below
+- Content: Lucide `Camera` 20px `#5b6377` centered + "Foto" 14px `#5b6377` below
 - Tap → no action in prototype (mock)
 
 **Unterschriften-Bereich:**
 - 2 signature blocks side-by-side: "Mieter" + "Vermieter"
-- Each: bordered rectangle 120px × 60px, border 1.5px dashed `#d2d5fc`, border-radius 8px, label 12px weight 400 `#5b6377` centered
+- Each: bordered rectangle 120px × 60px, border 1.5px dashed `#d2d5fc`, border-radius 8px, label 14px weight 400 `#5b6377` centered
 - Mock — not interactive
 
 **Protokoll exportieren row:**
 - Full-width tappable row: white card, border-radius 12px, border 1px `#d2d5fc`, 16px padding, 52px height
 - Icon: Lucide `Download` 20px `#5b6377` left
 - Label: "Protokoll exportieren" — 14px weight 700 `#1c2642`
-- Premium badge right: "Premium" — 12px weight 700, `#f97316` text on `#fff7ed` background, border-radius 99px, 4px/8px padding
+- Premium badge right: "Premium" — 14px weight 700, `#f97316` text on `#fff7ed` background, border-radius 99px, 4px/8px padding
 - Tap → no action (mock; premium gate shown in Phase 4)
 
 ---
@@ -416,7 +420,7 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 **Card grid:** 2-column grid, 12px gap
 - Each card: shadcn `card` — white, border-radius 12px, border 1px `#d2d5fc`, 16px padding
 - Card content:
-  - Category color dot (8px) + category label (12px weight 700 `#5b6377`) — top-left row
+  - Category color dot (8px) + category label (14px weight 700 `#5b6377`) — top-left row
   - Guide title: 16px weight 700 `#1c2642`, max 2 lines
   - Time + difficulty row: "~X Min" badge + "Leicht/Mittel/Schwer" badge — same pill style as detail screen meta
   - 8px gap between elements
@@ -444,9 +448,9 @@ All tokens carried from Phase 1 globals.css. No new tokens introduced.
 | Checklist toggle — option 2 | "Zeitplan" | ROADMAP.md |
 | Must-Do section label | "Muss erledigt werden" | Default (descriptive, not alarming) |
 | Must-Do badge | "Must-Do" | ROADMAP.md |
-| Add custom item FAB tooltip | — | No tooltip — icon speaks for itself |
+| Add custom item FAB tooltip | — | No tooltip — icon speaks for itself; accessibility via aria-label |
 | Add item sheet title | "Eigenen Punkt hinzufügen" | ROADMAP.md CHK-04 |
-| Add item CTA | "Hinzufügen" | Default |
+| Add item CTA | "Punkt hinzufügen" | Imperative + noun pattern (updated from "Hinzufügen") |
 | Add item placeholder | "z.B. Nachsendeauftrag einrichten" | Default |
 | Guide detail back | "← Zurück" | ROADMAP.md |
 | Guide detail mark-done CTA | "Als erledigt markieren ✓" | ROADMAP.md |
