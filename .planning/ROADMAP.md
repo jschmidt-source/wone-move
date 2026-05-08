@@ -12,8 +12,8 @@ Four phases build a complete clickable showcase prototype. Each phase adds a wor
 
 - [x] **Phase 1: Shell, Brand & Onboarding** — App scaffolding, design system, splash, 5-step onboarding flow, celebration screen, bottom navigation
 - [x] **Phase 2: Home + Aufgaben (Checkliste & Zeitplan)** — Dashboard, checklist with all categories, timeline toggle, step-by-step guide (Ummeldung), Übergabeprotokoll screen, progress ✓ 2026-05-08
-- [ ] **Phase 3: Verträge + Entdecken** — White-label provider comparison, FAQ/tips/emergency contacts, Kostenrechner, Adressänderungen
-- [ ] **Phase 4: Ich + Polish + Kosteneinschätzung** — Profile, KI Chatbot, Dokumentenspeicher, Premium Paywall, empty state, final polish, cost estimate document
+- [x] **Phase 3: Verträge + Entdecken** — White-label provider comparison, FAQ/tips/emergency contacts, Kostenrechner, Adressänderungen ✓ 2026-05-08
+- [x] **Phase 4: Ich + Polish + Kosteneinschätzung** — Profile, KI Chatbot, Dokumentenspeicher, Premium Paywall, empty state, final polish, cost estimate document ✓ 2026-05-08
 
 ## Phase Details
 
@@ -312,7 +312,7 @@ Plans:
 - [x] 04-01-PLAN.md — chatbotStore + /ich Profil screen + /ich/chatbot (3 pre-filled exchanges + paywall) + /ich/dokumente (2 mock docs + Premium-Lock-Card)
 - [x] 04-02-PLAN.md — /ich/premium (full-screen paywall, no bottom nav) + /ich/einstellungen (push bottom sheet, disabled rows) + /ich/datenschutz + /ich/impressum + Uebergabeprotokoll export patch
 - [x] 04-03-PLAN.md — Werbebanner above checklist + Empty State (confetti, all tasks done) on /aufgaben
-- [ ] 04-04-PLAN.md — COST-ESTIMATE.md: 3 scenarios x 7 components, Laufende Kosten, Zeitplan, Empfehlung
+- [x] 04-04-PLAN.md — COST-ESTIMATE.md: 3 scenarios x 7 components, Laufende Kosten, Zeitplan, Empfehlung
 
 ## Progress
 
@@ -321,4 +321,4 @@ Plans:
 | 1. Shell, Brand & Onboarding | Complete (4/4 plans) | 2026-05-08 |
 | 2. Home + Aufgaben | Complete (5/5 plans) | 2026-05-08 |
 | 3. Verträge + Entdecken | Complete (5/5 plans) | 2026-05-08 |
-| 4. Ich + Polish + Kosteneinschätzung | In progress (3/4 plans) | - |
+| 4. Ich + Polish + Kosteneinschätzung | Complete (4/4 plans) | 2026-05-08 |
