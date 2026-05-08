@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planned
-stopped_at: Phase 3 UI-SPEC approved. Ready to plan Phase 3 (Verträge + Entdecken).
-last_updated: "2026-05-08T15:00:00Z"
+stopped_at: Phase 3 planned — 5 plans in 3 waves. Ready to execute Phase 3 (Verträge + Entdecken).
+last_updated: "2026-05-08T16:00:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 0
+  total_plans: 5
   completed_plans: 9
   percent: 50
 ---
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 0 of ? in current phase
-Status: Phase 2 complete — all 5 plans delivered. Ready for Phase 3.
+Plan: 0 of 5 in current phase
+Status: Phase 3 planned — 5 plans in 3 waves. Ready to execute.
 Last activity: 2026-05-08
 
 Progress: [████████████] 29%

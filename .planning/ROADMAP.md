@@ -224,6 +224,13 @@ Plans:
   6. Notfallkontakte, Spartipps und Adressänderungen sind vollständig aufgebaut
   7. Suche zeigt kategorisierte Mock-Ergebnisse
 **UI hint**: yes
+**Plans**: 5 plans
+Plans:
+- [ ] 03-01-PLAN.md — Data foundation: types, mock data (anbieter/faq/spartipps/notfallkontakte/adressaenderungen), vertraegeStore
+- [ ] 03-02-PLAN.md — Verträge Hub + 4 comparison screens (Strom/Internet/Telefon/Versicherungen with Haftpflicht/Hausrat tabs) + ProviderCard/FilterPillRow/VertraegeKachel components
+- [ ] 03-03-PLAN.md — AbschlussSheet (multi-step bottom sheet, form → success inline) wired into all 4 comparison screens
+- [ ] 03-04-PLAN.md — Entdecken Hub (sticky search bar + 5 horizontal-scroll sections) + SearchOverlay (autocomplete + categorized results)
+- [ ] 03-05-PLAN.md — Entdecken sub-screens: FAQ accordion, Spartipps, Notfallkontakte (tap-to-call), Adressänderungen (15-checkbox local state)
 
 ### Phase 4: Ich + Polish + Kosteneinschätzung
 **Goal**: The personal tab is complete with profile, chatbot, document storage, and the premium paywall — plus full-app polish (empty state, animations, Free-tier ad banner) and the cost estimation document
