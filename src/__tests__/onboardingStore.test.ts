@@ -155,7 +155,8 @@ describe('useOnboardingStore localStorage persistence', () => {
   it('should persist data to localStorage key wone-onboarding after setMoveDate', async () => {
     const { useOnboardingStore } = await import('@/store/onboardingStore');
     useOnboardingStore.getState().setMoveDate('2026-06-15');
-    // Allow zustand persist to flush (synchronous in test env)
+    // Allow zustand persist to flush (async in some environments)
+    await new Promise((resolve) => setTimeout(resolve, 50));
     const stored = localStorageMock.getItem('wone-onboarding');
     expect(stored).not.toBeNull();
     const parsed = JSON.parse(stored!);
