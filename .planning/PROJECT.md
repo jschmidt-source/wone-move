@@ -290,7 +290,22 @@ Phase 1 complete 2026-05-08. Requirements validated: ONB-01, ONB-02, ONB-03, ONB
 - Next.js 16 + Tailwind v4 + shadcn Radix scaffolded, brand tokens live
 - 5-step onboarding flow → celebration → main app shell functional
 - Zustand store with localStorage persistence proven (18 tests passing)
-- 3 code review issues to fix before Phase 2 ship: reset() mutable ref, splash redirect check, confetti RAF cleanup
+
+## Validated Requirements (Phase 2)
+
+Phase 2 complete 2026-05-08. Requirements validated: CHK-01–05, GUIDE-01–03, GUIDE-05, PROG-02, TIME-01, TIME-02.
+- Dashboard, checklist, timeline, Ummeldung guide, Übergabeprotokoll, Kostenrechner built
+- filterTasks + preChecked pattern for personalized checklist proven
+
+## Validated Requirements (Phase 3)
+
+Phase 3 complete 2026-05-08. Requirements validated: GTK-01 (partial — Verträge hub), GTK-02, GTK-03, GTK-04, GTK-05, UX-02 (partial — SearchOverlay).
+- Verträge tab: hub + 4 comparison screens + AbschlussSheet full vertical slice
+- Entdecken tab: hub + SearchOverlay + 4 sub-screens (FAQ, Spartipps, Notfallkontakte, Adressänderungen)
+- vertraegeStore (Zustand+persist) drives hub kachel completion state
+- Code review findings: CR-04 (duplicate Krankenkasse entry) is a genuine data bug to fix; CR-01/02/03 are intentional prototype decisions
+
+**Current state:** 3 of 4 phases complete. Phase 4 (Ich + Polish + Kosteneinschätzung) is next and final.
 
 ---
-*Last updated: 2026-05-08 — Phase 1 complete. Phase 2 next: Home dashboard + Aufgaben checklist.*
+*Last updated: 2026-05-08 — Phase 3 complete. Phase 4 next: Ich tab + Polish + cost estimate document.*
