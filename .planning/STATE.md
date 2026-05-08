@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 4 plan 04-01 complete (2026-05-08). 3 plans remaining.
-last_updated: "2026-05-08T18:30:00Z"
+stopped_at: Phase 4 plan 04-02 complete (2026-05-08). 2 plans remaining.
+last_updated: "2026-05-08T20:03:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 3
   total_plans: 4
-  completed_plans: 11
+  completed_plans: 12
   percent: 75
 ---
 
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 4 of 4 (Ich + Polish + Kosteneinschätzung — planned, ready to execute)
-Plan: 1 of 4 in current phase
-Status: Phase 4 in progress — Plan 04-01 complete (chatbotStore + /ich + /ich/chatbot + /ich/dokumente).
+Plan: 2 of 4 in current phase
+Status: Phase 4 in progress — Plan 04-02 complete (/ich/premium paywall + /ich/einstellungen + /ich/datenschutz + /ich/impressum + Übergabeprotokoll patch).
 Last activity: 2026-05-08
 
 Progress: [████████████████████] 75%
@@ -106,6 +106,9 @@ Recent decisions affecting current work:
 - Plan 04-01: FREE_LIMIT=3 ist UI-only-Paywall; chatCount zählt nur User-submitted messages, nicht pre-filled PREFILLED-Array
 - Plan 04-01: PREFILLED array (6 entries = 3 user + 3 AI) ist statisch initialisiert in useState — kein Store-Eintrag nötig
 - Plan 04-01: Premium-Lock-Card als inline 3. Slot in Dokumente (dashed border) statt Modal — direkte Navigation zu /ich/premium
+- Plan 04-02: PremiumLayout (nested layout.tsx) unterdrückt BottomNav für /ich/premium — kein Route-Umzug nötig
+- Plan 04-02: PushSheet folgt AddItemSheet-Pattern (fixed-bottom overlay, translate-y) — shadcn Sheet nicht installiert
+- Plan 04-02: Inline Toast-Komponente (useEffect + setTimeout 2200ms) statt shadcn useToast — Paket nicht installiert
 
 ### Pending Todos
 
@@ -124,5 +127,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 4 plan 04-01 complete (2026-05-08). chatbotStore + /ich + /ich/chatbot + /ich/dokumente fertig.
-Resume file: .planning/phases/04-ich-polish/04-02-PLAN.md
+Stopped at: Phase 4 plan 04-02 complete (2026-05-08). /ich/premium + /ich/einstellungen + /ich/datenschutz + /ich/impressum + Übergabeprotokoll patch fertig.
+Resume file: .planning/phases/04-ich-polish/04-03-PLAN.md
