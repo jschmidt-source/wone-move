@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 3 Plan 05 complete (2026-05-08). Entdecken sub-screens: 4 routes + 2 components delivered.
-last_updated: "2026-05-08T18:00:00Z"
+stopped_at: Phase 3 complete (2026-05-08). All 5 plans delivered including 03-03 AbschlussSheet.
+last_updated: "2026-05-08T17:47:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 5
-  completed_plans: 9
-  percent: 50
+  completed_plans: 11
+  percent: 75
 ---
 
 # Project State
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 
 ## Current Position
 
-Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 5 of 5 in current phase (03-05 complete)
-Status: Phase 3 in progress — 03-05 complete (Entdecken sub-screens). 03-03 (AbschlussSheet) still pending.
+Phase: 3 of 4 (Verträge + Entdecken — abgeschlossen)
+Plan: 5 of 5 in current phase (Phase 3 complete)
+Status: Phase 3 vollständig — 03-03 (AbschlussSheet) abgeschlossen. Nächste: Phase 4 (Ich + Polish).
 Last activity: 2026-05-08
 
-Progress: [██████████████] 33%
+Progress: [████████████████████] 75%
 
 ## Performance Metrics
 
@@ -95,6 +95,9 @@ Recent decisions affecting current work:
 - Plan 03-02: Filter-Pill-Sortierung ist rein visuell (kein List-Reordering) — Prototyp-Spec
 - Plan 03-02: Versicherungen Hub-Kachel mapped auf /vertraege/versicherungen (D-01); markComplete('versicherungen') gilt für beide Tabs
 - Plan 03-02: onAbschliessen() ist No-Op-Stub in allen Vergleichsseiten — AbschlussSheet kommt in Plan 03-03
+- Plan 03-03: key={step} auf Content-Div triggert React Remount für CSS animate-in fade-in — kein Custom-Keyframe nötig
+- Plan 03-03: defaultValue statt value für readonly Inputs — verhindert React-Controlled-Component-Warnung bei readOnly ohne onChange
+- Plan 03-03: AbschlussSheet außerhalb overflow-y-auto — position:fixed funktioniert korrekt ohne Scroll-Container-Clipping
 - Plan 03-04: SearchOverlay nutzt inset-0 full-screen overlay (vereinfachter Prototyp) statt nur unterhalb der Suchleiste
 - Plan 03-04: ADRESSAENDERUNGEN.slice(0,3) zeigt Arbeitgeber/Finanzamt/Krankenkasse — Dateireihenfolge hat Vorrang vor UI-SPEC §7 Beispiel-Listing
 - Plan 03-05: FAQ accordion: Collapsible (bereits installiert) statt extra shadcn accordion — controlled openId state für single-open
@@ -117,5 +120,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 Plan 05 complete (2026-05-08). Entdecken Sub-Screens: 4 routes + 2 components. Phase 3 only 03-03 (AbschlussSheet) remaining.
-Resume file: .planning/phases/03-vertraege-entdecken/03-03-PLAN.md
+Stopped at: Phase 3 complete (2026-05-08). AbschlussSheet + 4-page wiring fertig. Phase 3 vollständig abgeschlossen.
+Resume file: .planning/phases/04-ich-polish (Phase 4, wenn gestartet)
