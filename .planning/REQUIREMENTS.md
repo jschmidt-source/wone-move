@@ -39,10 +39,10 @@
 ### Good to Know
 
 - [ ] **GTK-01**: A "Good to Know" section exists with useful tips, FAQ, and Wusstest-du-schon? cards
-- [ ] **GTK-02**: FAQ covers common first-mover questions (Rundfunkbeitrag, Ummeldungsfrist, Kaution, etc.)
-- [ ] **GTK-03**: Emergency contacts section with standard numbers (Notruf, Giftnotruf, Energieversorger Notfall)
-- [ ] **GTK-04**: Savings tips (Spartipps) for budget-conscious users are included
-- [ ] **GTK-05**: Address-change reminder list — all parties to notify (employer, bank, Krankenkasse, subscriptions)
+- [x] **GTK-02**: FAQ covers common first-mover questions (Rundfunkbeitrag, Ummeldungsfrist, Kaution, etc.)
+- [x] **GTK-03**: Emergency contacts section with standard numbers (Notruf, Giftnotruf, Energieversorger Notfall)
+- [x] **GTK-04**: Savings tips (Spartipps) for budget-conscious users are included
+- [x] **GTK-05**: Address-change reminder list — all parties to notify (employer, bank, Krankenkasse, subscriptions)
 
 ### Navigation & UX
 
@@ -104,9 +104,9 @@
 | TIME-01 | Phase 3 | Pending |
 | TIME-02 | Phase 3 | Pending |
 | GTK-01 | Phase 3 | Pending |
-| GTK-02 | Phase 3 | Pending |
-| GTK-03 | Phase 3 | Pending |
-| GTK-04 | Phase 3 | Pending |
-| GTK-05 | Phase 3 | Pending |
+| GTK-02 | Phase 3 | Complete (03-05) |
+| GTK-03 | Phase 3 | Complete (03-05) |
+| GTK-04 | Phase 3 | Complete (03-05) |
+| GTK-05 | Phase 3 | Complete (03-05) |
 | UX-02 | Phase 3 | Pending |
 | TIME-03 | Phase 4 | Pending |

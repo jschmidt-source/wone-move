@@ -230,7 +230,7 @@ Plans:
 - [x] 03-02-PLAN.md — Verträge Hub + 4 comparison screens (Strom/Internet/Telefon/Versicherungen with Haftpflicht/Hausrat tabs) + ProviderCard/FilterPillRow/VertraegeKachel components
 - [ ] 03-03-PLAN.md — AbschlussSheet (multi-step bottom sheet, form → success inline) wired into all 4 comparison screens
 - [x] 03-04-PLAN.md — Entdecken Hub (sticky search bar + 5 horizontal-scroll sections) + SearchOverlay (autocomplete + categorized results)
-- [ ] 03-05-PLAN.md — Entdecken sub-screens: FAQ accordion, Spartipps, Notfallkontakte (tap-to-call), Adressänderungen (15-checkbox local state)
+- [x] 03-05-PLAN.md — Entdecken sub-screens: FAQ accordion, Spartipps, Notfallkontakte (tap-to-call), Adressänderungen (15-checkbox local state)
 
 ### Phase 4: Ich + Polish + Kosteneinschätzung
 **Goal**: The personal tab is complete with profile, chatbot, document storage, and the premium paywall — plus full-app polish (empty state, animations, Free-tier ad banner) and the cost estimation document
@@ -314,5 +314,5 @@ Plans:
 |-------|--------|-----------|
 | 1. Shell, Brand & Onboarding | Complete (4/4 plans) | 2026-05-08 |
 | 2. Home + Aufgaben | Complete (5/5 plans) | 2026-05-08 |
-| 3. Verträge + Entdecken | In progress (4/5 plans) | - |
+| 3. Verträge + Entdecken | In progress (5/5 plans, 1 skipped: 03-03) | - |
 | 4. Ich + Polish + Kosteneinschätzung | Not started | - |

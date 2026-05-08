@@ -2,9 +2,9 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planned
-stopped_at: Phase 3 planned — 5 plans in 3 waves. Ready to execute Phase 3 (Verträge + Entdecken).
-last_updated: "2026-05-08T16:00:00Z"
+status: in_progress
+stopped_at: Phase 3 Plan 05 complete (2026-05-08). Entdecken sub-screens: 4 routes + 2 components delivered.
+last_updated: "2026-05-08T18:00:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 3 of 4 (Verträge + Entdecken)
-Plan: 4 of 5 in current phase
-Status: Phase 3 in progress — 03-04 complete (Entdecken Hub). 03-05 next (Entdecken sub-screens).
+Plan: 5 of 5 in current phase (03-05 complete)
+Status: Phase 3 in progress — 03-05 complete (Entdecken sub-screens). 03-03 (AbschlussSheet) still pending.
 Last activity: 2026-05-08
 
 Progress: [██████████████] 33%
@@ -97,6 +97,8 @@ Recent decisions affecting current work:
 - Plan 03-02: onAbschliessen() ist No-Op-Stub in allen Vergleichsseiten — AbschlussSheet kommt in Plan 03-03
 - Plan 03-04: SearchOverlay nutzt inset-0 full-screen overlay (vereinfachter Prototyp) statt nur unterhalb der Suchleiste
 - Plan 03-04: ADRESSAENDERUNGEN.slice(0,3) zeigt Arbeitgeber/Finanzamt/Krankenkasse — Dateireihenfolge hat Vorrang vor UI-SPEC §7 Beispiel-Listing
+- Plan 03-05: FAQ accordion: Collapsible (bereits installiert) statt extra shadcn accordion — controlled openId state für single-open
+- Plan 03-05: Adressänderungen progress bar: custom div h-1 statt shadcn Progress — vermeidet height-override-Komplexität mit base-nova Preset
 
 ### Pending Todos
 
@@ -115,5 +117,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 Plan 04 complete (2026-05-08). Entdecken Hub: 2 components + 1 page (EntdeckenSection, SearchOverlay, hub replaced). 03-05 next (Entdecken sub-screens).
-Resume file: .planning/phases/03-vertraege-entdecken/03-05-PLAN.md
+Stopped at: Phase 3 Plan 05 complete (2026-05-08). Entdecken Sub-Screens: 4 routes + 2 components. Phase 3 only 03-03 (AbschlussSheet) remaining.
+Resume file: .planning/phases/03-vertraege-entdecken/03-03-PLAN.md
