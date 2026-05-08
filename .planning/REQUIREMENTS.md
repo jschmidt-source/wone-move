@@ -23,7 +23,7 @@
 - [x] **GUIDE-02**: Each guide explains the task, required documents, and approximate time needed
 - [x] **GUIDE-03**: Guides for authority-related tasks (Ummeldung, Rundfunkbeitrag) include city-specific links based on user's PLZ
 - [ ] **GUIDE-04**: Guides are also accessible as a standalone section (sorted by category), independent of the checklist
-- [ ] **GUIDE-05**: Guide for apartment handover (Übergabeprotokoll) with photo checklist is included
+- [x] **GUIDE-05**: Guide for apartment handover (Übergabeprotokoll) with photo checklist is included
 
 ### Timeline
 
@@ -98,7 +98,7 @@
 | GUIDE-02 | Phase 2 | Complete (Plan 1) |
 | GUIDE-03 | Phase 2 | Complete (Plan 1) |
 | GUIDE-04 | Phase 2 | Pending |
-| GUIDE-05 | Phase 2 | Pending |
+| GUIDE-05 | Phase 2 | Complete (Plan 5) |
 | PROG-01 | Phase 2 | Complete (Plan 2) |
 | PROG-02 | Phase 2 | Complete (Plan 3) |
 | TIME-01 | Phase 3 | Pending |

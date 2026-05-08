@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 2 Plan 4 complete — Anleitungen browser grid + dynamic guide detail page with full Ummeldung content, GuideStepList, mark-done CTA
-last_updated: "2026-05-08T14:12:00Z"
+stopped_at: Phase 2 Plan 5 complete — Kostenrechner reactive page + Übergabeprotokoll with 5 Zimmer-Tabs, ConditionToggle, PhotoSlot. Phase 2 fully complete.
+last_updated: "2026-05-08T14:27:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 2 of 4 (Home + Aufgaben)
-Plan: 4 of 5 in current phase
-Status: Phase 2 Plan 4 complete — Anleitungen browser + guide detail page delivered (Wave 3)
+Plan: 5 of 5 in current phase (Phase 2 complete)
+Status: Phase 2 complete — all 5 plans delivered. Kostenrechner + Übergabeprotokoll (Wave 3 final) complete.
 Last activity: 2026-05-08
 
 Progress: [████████████] 29%
@@ -85,6 +85,9 @@ Recent decisions affecting current work:
 - Plan 02-02: Logo placed in welcome header via next/image (h-9, priority) — brand identity without displacing content
 - Plan 02-02: Progress component Tailwind override uses [&>[data-slot=progress-track]] selector for base-nova slot names
 - Plan 02-02: deadlineColor helper receives today as explicit param — avoids stale closure in SSR context
+- Plan 02-05: Base UI Slider onValueChange receives typed value directly (number | number[]) — cast to number[] for array usage
+- Plan 02-05: Base UI Tabs active state uses data-active:* selectors (not Radix's data-[state=active]:*) — matches base-nova preset
+- Plan 02-05: ConditionToggle clicking active button returns state to null — allows clearing a selection
 
 ### Pending Todos
 
@@ -103,5 +106,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 2 Plan 4 complete — Anleitungen browser grid + /anleitungen/[slug] detail page with full Ummeldung guide, GuideStepList, mark-done CTA. Wave 3 continuing.
-Resume file: .planning/phases/02-home-aufgaben/02-04-SUMMARY.md
+Stopped at: Phase 2 complete — all 5 plans delivered. Kostenrechner + Übergabeprotokoll pages live. Ready for Phase 3 (Verträge + Entdecken).
+Resume file: .planning/phases/02-home-aufgaben/02-05-SUMMARY.md

@@ -141,7 +141,7 @@ Plans:
 - [x] 02-02-PLAN.md — Home Dashboard: greeting, countdown, progress bar, Nächste Aufgabe, tips, quick-actions, deadlines
 - [x] 02-03-PLAN.md — Aufgaben tab: Checkliste/Zeitplan toggle, Must-Do, 5 categories, FAB + AddItemSheet, 5 timeline buckets
 - [x] 02-04-PLAN.md — Anleitungen browser + dynamic /anleitungen/[slug] with full Ummeldung guide
-- [ ] 02-05-PLAN.md — Kostenrechner (reactive) + Übergabeprotokoll (5 Zimmer-Tabs, condition toggles, photo slots)
+- [x] 02-05-PLAN.md — Kostenrechner (reactive) + Übergabeprotokoll (5 Zimmer-Tabs, condition toggles, photo slots)
 
 ### Phase 3: Verträge + Entdecken
 **Goal**: The monetization tab (Verträge) and the knowledge tab (Entdecken) are fully built — users can go through the full provider comparison and in-app "sign-up" flow, and access all guides, FAQ, tips, and emergency contacts
@@ -306,6 +306,6 @@ Plans:
 | Phase | Status | Completed |
 |-------|--------|-----------|
 | 1. Shell, Brand & Onboarding | Complete (4/4 plans) | 2026-05-08 |
-| 2. Home + Aufgaben | In progress (4/5 plans) | - |
+| 2. Home + Aufgaben | Complete (5/5 plans) | 2026-05-08 |
 | 3. Verträge + Entdecken | Not started | - |
 | 4. Ich + Polish + Kosteneinschätzung | Not started | - |
