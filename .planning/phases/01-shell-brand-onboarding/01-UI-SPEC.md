@@ -57,13 +57,16 @@ Exceptions:
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 16px | 400 (Regular) | 1.5 | Default text, onboarding hint copy, toggle labels |
-| Label | 14px | 600 (Semibold) | 1.4 | Nav tab labels, step indicator text, input labels, badge text |
+| Label | 14px | 700 (Bold) | 1.4 | Step indicator text, input labels, badge text |
+| Nav label | 12px | 700 (Bold) | 1.4 | Bottom navigation tab labels |
 | Heading | 20px | 700 (Bold) | 1.3 | Onboarding step titles ("Wann ziehst du um?"), welcome subline |
 | Display | 28px | 700 (Bold) | 1.2 | Welcome screen headline, celebration screen headline |
 
 Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in `tailwind.config.ts`.
 
-**Source:** ROADMAP.md success criterion 1 (Plus Jakarta Sans); sizes derived from screen hierarchy in ROADMAP.md Phase 1 screen specs; weights default to 2-weight system (regular + bold, with semibold for labels).
+Weight system: two weights only — 400 (Regular) for body copy and 700 (Bold) for all labels, headings, display text, and interactive elements. No intermediate weights.
+
+**Source:** ROADMAP.md success criterion 1 (Plus Jakarta Sans); sizes derived from screen hierarchy in ROADMAP.md Phase 1 screen specs. 10px nav label replaced with 12px (nearest 4-point multiple, legible at mobile density). Semibold (600) removed; all label/interactive weights unified to Bold (700).
 
 ---
 
@@ -114,7 +117,7 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 - Display headline: "Dein erster Auszug. Wir begleiten dich." — 28px, weight 700, color `#1c2642`
 - Subheading: "Dein persönlicher Umzugsplan in 2 Minuten." — 20px, weight 700, color `#5b6377`
 - Vertical spacing between headline block and CTA: 32px
-- Primary CTA button "Jetzt starten": full-width, height 52px, background `#646efb`, text white 16px weight 600, border-radius 12px
+- Primary CTA button "Jetzt starten": full-width, height 52px, background `#646efb`, text white 16px weight 700, border-radius 12px
 - Button positioned in lower third of screen with 16px horizontal margin
 - No secondary CTA on this screen
 
@@ -122,24 +125,24 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 
 - Rendered at top of each onboarding screen below the status bar
 - 5 dots, 8px diameter each, 4px gap
-- Active dot: `#646efb` filled, 10px diameter (slightly larger)
+- Active dot: `#646efb` filled, 12px diameter (slightly larger, aligned to 4-point grid)
 - Completed dot: `#646efb` filled, 8px
 - Inactive dot: `#d2d5fc` filled, 8px
-- Step counter text: "Schritt X von 5" — 14px, weight 600, color `#5b6377`, centered below dots
+- Step counter text: "Schritt X von 5" — 14px, weight 700, color `#5b6377`, centered below dots
 - Top padding from screen edge: 16px
 
 ### 4. Onboarding Schritt 1 — Umzugsdatum
 
 - Screen title: "Wann ziehst du um?" — 20px, weight 700, `#1c2642`
 - Date picker: mock implementation — display a native `<input type="date">` styled with Tailwind to match brand, or a shadcn Popover + Calendar component
-- Selected date displayed in a pill badge below the picker: 14px, weight 600, `#646efb` background `#d2d5fc`
-- "Weiter" button: full-width, 52px height, `#646efb`, white text, 16px weight 600, border-radius 12px, 16px horizontal margin, pinned 16px above bottom safe area
+- Selected date displayed in a pill badge below the picker: 14px, weight 700, `#646efb` background `#d2d5fc`
+- "Weiter" button: full-width, 52px height, `#646efb`, white text, 16px weight 700, border-radius 12px, 16px horizontal margin, pinned 16px above bottom safe area
 
 ### 5. Onboarding Schritt 2 — Wohin?
 
 - Screen title: "Wohin ziehst du?" — 20px, weight 700, `#1c2642`
 - Two inputs stacked with 16px gap:
-  - Label: "PLZ der neuen Wohnung" — 14px weight 600 `#1c2642`
+  - Label: "PLZ der neuen Wohnung" — 14px weight 700 `#1c2642`
   - Input field: height 52px, border 1.5px `#d2d5fc` at rest, `#646efb` on focus, border-radius 10px, 16px padding, 16px font size weight 400 `#1c2642`
   - Placeholder text: "z.B. 80331" / "z.B. Hamburg" — `#5b6377`
   - Label: "Von welcher Stadt?" — same treatment
@@ -156,7 +159,7 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
   - Default state: background white, border 1.5px `#d2d5fc`
   - Selected state: background `#d2d5fc`, border 2px `#646efb`
   - Icon: 24px emoji centered above label
-  - Label: 14px weight 600 `#1c2642`, centered
+  - Label: 14px weight 700 `#1c2642`, centered
 - Tiles: "Ich alleine", "Mit Freunden", "Umzugsfirma", "Gemischt"
 - Selection: single-select (only one tile active at a time)
 - "Weiter" button: same spec — disabled until a tile is selected (opacity 0.4, not tappable)
@@ -193,8 +196,8 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 - Summary card: white background, border-radius 14px, 16px padding, 24px below headline
   - Content: "Umzugsdatum: [date] · Von: [city] · 23 Aufgaben warten auf dich"
   - Font: 16px weight 400, `#5b6377`
-  - Date and city values: weight 600, `#1c2642`
-- CTA "Los geht's →": full-width, 52px, `#646efb`, white text, 16px weight 600, border-radius 12px, 16px margin, pinned 16px above bottom safe area
+  - Date and city values: weight 700, `#1c2642`
+- CTA "Los geht's →": full-width, 52px, `#646efb`, white text, 16px weight 700, border-radius 12px, 16px margin, pinned 16px above bottom safe area
 - No back navigation on this screen (onboarding is complete, data already saved)
 
 ### 10. Bottom Navigation
@@ -205,7 +208,7 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 - 5 tabs: Home | Aufgaben | Verträge | Entdecken | Ich
 - Active tab: icon + label color `#646efb`, icon filled variant
 - Inactive tab: icon + label color `#5b6377`, icon outlined variant
-- Tab label: 10px weight 600 (below icon)
+- Tab label: 12px weight 700 (below icon)
 - Icon size: 24px
 - Tab hit area: full tab width × 56px (no smaller)
 - Active indicator: no underline or pill — color change only
@@ -225,8 +228,8 @@ Font family: `'Plus Jakarta Sans', sans-serif` — apply as `fontFamily.sans` in
 | Element | German Copy | Notes |
 |---------|-------------|-------|
 | Welcome CTA | "Jetzt starten" | Source: ROADMAP.md |
-| Onboarding continue | "Weiter" | All steps 1–4 |
-| Onboarding finish | "Fertig" | Step 5 only |
+| Onboarding continue | "Weiter" | All steps 1–4 — short imperative suits German mobile context |
+| Onboarding finish | "Fertig" | Step 5 only — affirming completion fits Gen-Z tone |
 | Celebration CTA | "Los geht's →" | Source: ROADMAP.md |
 | Step indicator | "Schritt X von 5" | X = current step number |
 | Onboarding hint | "Keine Sorge — du kannst alles jederzeit ändern." | Source: ROADMAP.md, Schritt 5 |
