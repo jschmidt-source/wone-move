@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 2 Plan 1 complete — data foundation (types, tasks, guides, store, shadcn)
-last_updated: "2026-05-08T13:58:30Z"
+stopped_at: Phase 2 Plan 2 complete — Home Dashboard with logo, progress, next task, tips, quick-actions, deadlines
+last_updated: "2026-05-08T14:10:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 0
-  completed_plans: 5
-  percent: 22
+  completed_plans: 6
+  percent: 26
 ---
 
 # Project State
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 2 of 4 (Home + Aufgaben)
-Plan: 1 of 5 in current phase
-Status: Phase 2 Plan 1 complete — data foundation delivered (Wave 1)
+Plan: 2 of 5 in current phase
+Status: Phase 2 Plan 2 complete — Home Dashboard delivered (Wave 2)
 Last activity: 2026-05-08
 
 Progress: [███████████] 28%
@@ -79,6 +79,9 @@ Recent decisions affecting current work:
 - Plan 02-01: filterTasks returns {tasks, preChecked} tuple; callers apply preChecked to store
 - Plan 02-01: GUIDES keyed by slug string for direct URL routing to /anleitungen/[slug]
 - Plan 02-01: shadcn base-nova style uses @base-ui/react (not Radix UI) — matches existing project components
+- Plan 02-02: Logo placed in welcome header via next/image (h-9, priority) — brand identity without displacing content
+- Plan 02-02: Progress component Tailwind override uses [&>[data-slot=progress-track]] selector for base-nova slot names
+- Plan 02-02: deadlineColor helper receives today as explicit param — avoids stale closure in SSR context
 
 ### Pending Todos
 
@@ -97,5 +100,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 2 Plan 1 complete — data foundation (types/tasks/guides/store/shadcn). Wave 1 done.
-Resume file: .planning/phases/02-home-aufgaben/02-01-SUMMARY.md
+Stopped at: Phase 2 Plan 2 complete — Home Dashboard (greeting, countdown, progress, next task, tips, quick-actions, deadlines, logo). Wave 2 in progress.
+Resume file: .planning/phases/02-home-aufgaben/02-02-SUMMARY.md
