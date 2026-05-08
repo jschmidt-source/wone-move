@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 4 planned (2026-05-08). 4 plans ready to execute.
+stopped_at: Phase 4 plan 04-01 complete (2026-05-08). 3 plans remaining.
 last_updated: "2026-05-08T18:30:00Z"
 last_activity: 2026-05-08
 progress:
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 4 of 4 (Ich + Polish + Kosteneinschätzung — planned, ready to execute)
-Plan: 0 of 4 in current phase
-Status: Phase 4 geplant — 4 Plans erstellt. Bereit zur Ausführung.
+Plan: 1 of 4 in current phase
+Status: Phase 4 in progress — Plan 04-01 complete (chatbotStore + /ich + /ich/chatbot + /ich/dokumente).
 Last activity: 2026-05-08
 
 Progress: [████████████████████] 75%
@@ -102,6 +102,10 @@ Recent decisions affecting current work:
 - Plan 03-04: ADRESSAENDERUNGEN.slice(0,3) zeigt Arbeitgeber/Finanzamt/Krankenkasse — Dateireihenfolge hat Vorrang vor UI-SPEC §7 Beispiel-Listing
 - Plan 03-05: FAQ accordion: Collapsible (bereits installiert) statt extra shadcn accordion — controlled openId state für single-open
 - Plan 03-05: Adressänderungen progress bar: custom div h-1 statt shadcn Progress — vermeidet height-override-Komplexität mit base-nova Preset
+- Plan 04-01: chatbotStore kein 'use client' — folgt vertraegeStore-Pattern; localStorage key 'wone-chatbot'
+- Plan 04-01: FREE_LIMIT=3 ist UI-only-Paywall; chatCount zählt nur User-submitted messages, nicht pre-filled PREFILLED-Array
+- Plan 04-01: PREFILLED array (6 entries = 3 user + 3 AI) ist statisch initialisiert in useState — kein Store-Eintrag nötig
+- Plan 04-01: Premium-Lock-Card als inline 3. Slot in Dokumente (dashed border) statt Modal — direkte Navigation zu /ich/premium
 
 ### Pending Todos
 
@@ -120,5 +124,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 3 complete (2026-05-08). AbschlussSheet + 4-page wiring fertig. Phase 3 vollständig abgeschlossen.
-Resume file: .planning/phases/04-ich-polish (Phase 4, wenn gestartet)
+Stopped at: Phase 4 plan 04-01 complete (2026-05-08). chatbotStore + /ich + /ich/chatbot + /ich/dokumente fertig.
+Resume file: .planning/phases/04-ich-polish/04-02-PLAN.md
