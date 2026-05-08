@@ -56,6 +56,12 @@ Four phases build a complete clickable showcase prototype. Each phase adds a wor
   4. Bottom Navigation ist sichtbar und korrekt aufgebaut
   5. Tapping auf jeden Nav-Tab navigiert ohne Fehler (Placeholder-Screens in Phase 1 OK)
 **UI hint**: yes
+**Plans**: 4 plans
+Plans:
+- [ ] 01-PLAN-1.md — Project scaffold: Next.js 15, shadcn init, brand tokens, Zustand store, OnboardingData types
+- [ ] 01-PLAN-2.md — Splash screen (auto-redirect 1500ms) + Welcome screen (headline, CTA)
+- [ ] 01-PLAN-3.md — Onboarding steps 1–5 dynamic route with store integration
+- [ ] 01-PLAN-4.md — Celebration screen (confetti + summary) + Bottom Navigation + placeholder tabs
 
 ### Phase 2: Home + Aufgaben (Checkliste & Zeitplan)
 **Goal**: The two most important tabs are fully built — Dashboard with progress and quick actions, Aufgaben with checklist view and timeline toggle, a complete Ummeldung guide, and the Übergabeprotokoll screen
