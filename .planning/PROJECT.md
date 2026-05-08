@@ -305,7 +305,18 @@ Phase 3 complete 2026-05-08. Requirements validated: GTK-01 (partial — Verträ
 - vertraegeStore (Zustand+persist) drives hub kachel completion state
 - Code review findings: CR-04 (duplicate Krankenkasse entry) is a genuine data bug to fix; CR-01/02/03 are intentional prototype decisions
 
-**Current state:** 3 of 4 phases complete. Phase 4 (Ich + Polish + Kosteneinschätzung) is next and final.
+## Validated Requirements (Phase 4)
+
+Phase 4 complete 2026-05-08. Requirements validated: TIME-03 (stretch — push opt-in UI), UX-Verfeinerungen (werbebanner, empty state, polish).
+- chatbotStore (Zustand+persist, wone-chatbot key) — free limit = 3, inline paywall banner
+- Ich tab: Profil/Mein Umzug, KI Chatbot, Dokumentenspeicher (all screens built)
+- Premium Paywall (full-screen, no bottom nav via nested layout override), 8-row comparison table
+- Einstellungen: push toggle bottom sheet (AddItemSheet pattern), Datenschutz, Impressum
+- Werbebanner (48px, non-dismissible) + completion empty state with confetti on /aufgaben
+- COST-ESTIMATE.md delivered: 3 scenarios × 7 components, EUR 4K–323K ranges, Freelancer-Hybrid recommendation
+- Code review (0 critical, 7 warnings, 4 info) — all warnings are prototype-scope stubs
+
+**Current state:** ALL 4 PHASES COMPLETE. Prototype delivered. COST-ESTIMATE.md final deliverable committed.
 
 ---
-*Last updated: 2026-05-08 — Phase 3 complete. Phase 4 next: Ich tab + Polish + cost estimate document.*
+*Last updated: 2026-05-08 — Phase 4 complete. Prototype fully delivered.*
