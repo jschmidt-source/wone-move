@@ -13,13 +13,13 @@
 
 - [x] **CHK-01**: Checklist is organized into categories: Organisatorisches, Verträge, Versicherungen, Einrichtung, Finanzen
 - [x] **CHK-02**: Each checklist item can be checked off and state persists in localStorage
-- [ ] **CHK-03**: A "Must-Do" section is pinned at the top of the checklist (highest-priority items)
+- [x] **CHK-03**: A "Must-Do" section is pinned at the top of the checklist (highest-priority items)
 - [x] **CHK-04**: User can add custom checklist items
 - [x] **CHK-05**: Checklist is filtered/tailored based on onboarding answers (e.g., no car → no KFZ-Ummeldung)
 
 ### Schritt-für-Schritt Anleitungen
 
-- [ ] **GUIDE-01**: Each checklist item links to a step-by-step guide (accessible via click)
+- [x] **GUIDE-01**: Each checklist item links to a step-by-step guide (accessible via click)
 - [x] **GUIDE-02**: Each guide explains the task, required documents, and approximate time needed
 - [x] **GUIDE-03**: Guides for authority-related tasks (Ummeldung, Rundfunkbeitrag) include city-specific links based on user's PLZ
 - [ ] **GUIDE-04**: Guides are also accessible as a standalone section (sorted by category), independent of the checklist
@@ -34,7 +34,7 @@
 ### Fortschritt
 
 - [ ] **PROG-01**: A progress bar shows overall completion percentage
-- [ ] **PROG-02**: Each category shows its own completion count (e.g., "Verträge: 2/5")
+- [x] **PROG-02**: Each category shows its own completion count (e.g., "Verträge: 2/5")
 
 ### Good to Know
 
@@ -91,16 +91,16 @@
 | UX-04 | Phase 1 | Complete (Plan 1) |
 | CHK-01 | Phase 2 | Pending |
 | CHK-02 | Phase 2 | Pending |
-| CHK-03 | Phase 2 | Pending |
-| CHK-04 | Phase 2 | Pending |
-| CHK-05 | Phase 2 | Pending |
-| GUIDE-01 | Phase 2 | Pending |
-| GUIDE-02 | Phase 2 | Pending |
-| GUIDE-03 | Phase 2 | Pending |
+| CHK-03 | Phase 2 | Complete (Plan 3) |
+| CHK-04 | Phase 2 | Complete (Plan 3) |
+| CHK-05 | Phase 2 | Complete (Plan 1) |
+| GUIDE-01 | Phase 2 | Complete (Plan 3) |
+| GUIDE-02 | Phase 2 | Complete (Plan 1) |
+| GUIDE-03 | Phase 2 | Complete (Plan 1) |
 | GUIDE-04 | Phase 2 | Pending |
 | GUIDE-05 | Phase 2 | Pending |
-| PROG-01 | Phase 2 | Pending |
-| PROG-02 | Phase 2 | Pending |
+| PROG-01 | Phase 2 | Complete (Plan 2) |
+| PROG-02 | Phase 2 | Complete (Plan 3) |
 | TIME-01 | Phase 3 | Pending |
 | TIME-02 | Phase 3 | Pending |
 | GTK-01 | Phase 3 | Pending |

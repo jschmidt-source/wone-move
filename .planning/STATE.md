@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-stopped_at: Phase 2 Plan 2 complete — Home Dashboard with logo, progress, next task, tips, quick-actions, deadlines
-last_updated: "2026-05-08T14:10:00Z"
+stopped_at: Phase 2 Plan 3 complete — Aufgaben tab with Checkliste/Zeitplan toggle, Must-Do, 5 categories, FAB, AddItemSheet, 5 timeline buckets
+last_updated: "2026-05-08T14:25:00Z"
 last_activity: 2026-05-08
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 0
-  completed_plans: 6
+  completed_plans: 7
   percent: 26
 ---
 
@@ -26,8 +26,8 @@ See: .planning/PROJECT.md (updated 2026-05-08)
 ## Current Position
 
 Phase: 2 of 4 (Home + Aufgaben)
-Plan: 2 of 5 in current phase
-Status: Phase 2 Plan 2 complete — Home Dashboard delivered (Wave 2)
+Plan: 3 of 5 in current phase
+Status: Phase 2 Plan 3 complete — Aufgaben tab (Checkliste + Zeitplan) delivered (Wave 2)
 Last activity: 2026-05-08
 
 Progress: [███████████] 28%
@@ -100,5 +100,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-08
-Stopped at: Phase 2 Plan 2 complete — Home Dashboard (greeting, countdown, progress, next task, tips, quick-actions, deadlines, logo). Wave 2 in progress.
-Resume file: .planning/phases/02-home-aufgaben/02-02-SUMMARY.md
+Stopped at: Phase 2 Plan 3 complete — Aufgaben tab (toggle, Must-Do, 5 categories, FAB, AddItemSheet, Zeitplan with 5 buckets). Wave 2 continuing.
+Resume file: .planning/phases/02-home-aufgaben/02-03-SUMMARY.md
