@@ -92,10 +92,13 @@ Four phases build a complete clickable showcase prototype. Each phase adds a wor
     - Notfallkontakte (Notruf 110/112, Giftnotruf, Energieversorger)
     - Spartipps cards
     - Adressänderungen checklist (employer, bank, Krankenkasse, subscriptions)
-  - Anbieter-Vergleich screen:
-    - Strom, Internet, Telefon tabs
-    - Mock provider cards with price, rating, CTA button ("Bei Check24 vergleichen")
-    - Commission badge ("Partnerangebot")
+  - Anbieter-Vergleich screen (White-Label-Style — Nutzer verlässt die App nie):
+    - Tabs: Strom, Internet, Telefon, Versicherungen
+    - Anbieter-Karten: Logo, Anbieter-Name, Preis/Monat, Sterne-Rating, Laufzeit, Highlights (z.B. "Ökostrom", "Keine Mindestlaufzeit")
+    - "Jetzt abschließen" Button → öffnet Bestätigungs-Modal direkt in der App (simuliert den White-Label-Flow)
+    - Bestätigungs-Modal: Zusammenfassung, "Weiter zum Abschluss" → Erfolgsmeldung "Vertrag beantragt!"
+    - "Empfohlen" / "Partnerangebot" Badges auf ausgewählten Karten
+    - Hinweis: "Wir erhalten eine Provision — für dich entstehen keine Mehrkosten"
   - KI Chatbot screen:
     - Chat UI (bubbles, input field)
     - 3 hardcoded example Q&A exchanges

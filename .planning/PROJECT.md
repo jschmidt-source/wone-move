@@ -40,7 +40,10 @@ Wone MOVE bundles it into one personalized flow.
 
 ## Business Model
 
-Affiliate commissions when users sign up for utilities (electricity, internet), insurance, or other contracts via the app. Secondary: partnerships and premium placements with providers. Premium tier removes ads and unlocks advanced features.
+**Primary: Provision via White-Label-Integration**
+Anbieter (Strom, Internet, Versicherungen) werden direkt in der App über eine White-Label- oder API-Partnership eingebunden (wie Stufe 2 — z.B. Verivox Partner-API, Check24 Connect). Nutzer schließt Vertrag ab, ohne die App zu verlassen. Provision pro Abschluss: €20–€100 je nach Produktkategorie.
+
+**Sekundär:** Premium-Platzierungen (Anbieter zahlen für "Empfohlen"-Badge), Premium-Abo (no ads, KI Chatbot unlimited, Dokumentenspeicher).
 
 ## Constraints
 
@@ -67,7 +70,7 @@ Affiliate commissions when users sign up for utilities (electricity, internet), 
 
 ### Feature Screens
 - Schritt-für-Schritt Anleitung detail screen (one example fully built out, e.g. Ummeldung)
-- Anbieter-Vergleich screen (Strom, Internet — links to Check24)
+- Anbieter-Vergleich screen (Strom, Internet, Versicherungen — White-Label-Style vollständig integriert: Nutzer verlässt die App nie, Anbieter-Karten mit Logo, Preis, Rating, Laufzeit, Abschluss direkt im Screen simuliert)
 - KI Chatbot screen (chat UI with hardcoded responses)
 - Dokumentenspeicher screen (upload UI, mock documents)
 - Moodboard screen (Pinterest-style grid, mock images)
