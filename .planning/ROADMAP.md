@@ -2,84 +2,177 @@
 
 ## Overview
 
-Three phases turn an empty Next.js repo into a demo-ready prototype. Phase 1 scaffolds the app and delivers onboarding so there is something to show on day one. Phase 2 adds the personalized checklist, step-by-step guides, and progress tracking — the core value of the product. Phase 3 completes the experience with the timeline view, "Good to Know" content, and polished UX. Phase 4 is optional stretch work if time permits.
+Four phases build a complete clickable showcase prototype. Each phase adds a working section of the app with realistic mock data and full navigation. The final deliverable is a cost estimation document for real development.
+
+**Prototype goal:** Every screen built, every feature visible, mock data throughout. Not functional — visual. The team uses this to validate the concept before committing to real development.
 
 ## Phases
 
-**Phase Numbering:**
-- Integer phases (1, 2, 3, 4): Planned milestone work
-- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
-
-Decimal phases appear between their surrounding integers in numeric order.
-
-- [ ] **Phase 1: Foundation & Onboarding** - Project scaffold, brand shell, and the onboarding questionnaire
-- [ ] **Phase 2: Checkliste & Anleitungen** - Personalized checklist, step-by-step guides, and progress tracking
-- [ ] **Phase 3: Zeitplan, Good to Know & UX-Feinschliff** - Timeline view, tips/FAQ section, and polished mobile UX
-- [ ] **Phase 4: Suche & Push-Benachrichtigungen (optional)** - Search across content and opt-in browser push notifications
+- [ ] **Phase 1: Shell, Brand & Onboarding** — App scaffolding, design system, splash, and the full onboarding questionnaire flow
+- [ ] **Phase 2: Core App — Checkliste & Anleitungen** — Dashboard, personalized checklist, step-by-step guide screens, progress
+- [ ] **Phase 3: Zeitplan, Good to Know & Feature Screens** — Timeline, FAQ/tips, KI Chatbot, Dokumentenspeicher, Moodboard
+- [ ] **Phase 4: Account, Premium & Kosteneinschätzung** — Profile, settings, premium paywall UI, and the final cost estimation document
 
 ## Phase Details
 
-### Phase 1: Foundation & Onboarding
-**Goal**: A user can open the app, see the branded shell with navigation, complete the onboarding questionnaire, and have their answers saved — ready to generate a personalized checklist
+### Phase 1: Shell, Brand & Onboarding
+**Goal**: The app opens with the correct brand identity and a user can navigate through the complete onboarding questionnaire — all screens, all questions, mock "completion" that lands on the dashboard
 **Mode**: mvp
-**Depends on**: Nothing (first phase)
+**Depends on**: Nothing
 **Requirements**: ONB-01, ONB-02, ONB-03, ONB-04, UX-01, UX-03, UX-04
-**Success Criteria** (what must be TRUE):
-  1. User opens the app on a mobile screen and sees the Wone MOVE brand (correct colors, bottom nav bar) without layout breakage
-  2. User completes all 6–8 onboarding questions (including Umzugsdatum, PLZ, Haushaltsgröße) and reaches the checklist screen
-  3. After refreshing the browser, the questionnaire answers are still present — nothing is lost
-  4. User can mark items as already done during onboarding ("Hast du bereits?") and those items appear pre-checked on the checklist
-  5. Navigating via the bottom nav bar between sections works without full page reload
-**Plans**: TBD
+**Screens**:
+  - Splash / Loading screen (logo, brand colors, animation)
+  - Welcome screen (headline, subline, CTA "Jetzt starten")
+  - Onboarding questionnaire — 6–8 step flow with progress indicator:
+    - Schritt 1: Umzugsdatum
+    - Schritt 2: PLZ neue Wohnung + Von wo? (Stadt)
+    - Schritt 3: Wohnungsgröße (Quadratmeter + Zimmer)
+    - Schritt 4: Budget (günstig / mittel / flexibel)
+    - Schritt 5: Wie umziehen? (selbst / Freunde / Umzugsunternehmen)
+    - Schritt 6: Hast du ein Auto?
+    - Schritt 7: Was ist dir am wichtigsten? (günstig / schnell / stressfrei / nachhaltig)
+    - Schritt 8: "Hast du bereits?" pre-check (Wohnung, Transport, Strom/Internet, Ummeldung)
+  - Completion / Übergang screen ("Dein Plan ist fertig!")
+  - Bottom navigation bar (Checkliste, Zeitplan, Anleitungen, Good to Know)
+**Success Criteria**:
+  1. App opens at 375px width with correct colors (#646efb, #1c2642, #f6f7f7) — no layout issues
+  2. User can tap through all 8 onboarding steps and reach the dashboard
+  3. Bottom nav bar is visible and tapping each item navigates to the correct section (placeholder screens OK in Phase 1)
+  4. "Hast du bereits?" screen shows pre-check options that carry through to checklist
 **UI hint**: yes
 
-### Phase 2: Checkliste & Anleitungen
-**Goal**: Users see a personalized, categorized checklist filtered by their onboarding answers, can check off items with persistence, and can open a step-by-step guide for any item — with progress reflected across the app
+### Phase 2: Core App — Checkliste & Anleitungen
+**Goal**: The main app experience — dashboard with progress overview, full categorized checklist with mock data, and at least one fully detailed step-by-step guide (Ummeldung) with all other guides as realistic previews
 **Mode**: mvp
 **Depends on**: Phase 1
 **Requirements**: CHK-01, CHK-02, CHK-03, CHK-04, CHK-05, GUIDE-01, GUIDE-02, GUIDE-03, GUIDE-04, GUIDE-05, PROG-01, PROG-02
-**Success Criteria** (what must be TRUE):
-  1. Checklist is organized into Organisatorisches, Verträge, Versicherungen, Einrichtung, Finanzen categories — and "Must-Do" items are pinned at the top
-  2. Items irrelevant to the user's situation are absent (e.g., no KFZ-Ummeldung if no car was indicated)
-  3. User checks off an item, reloads the page, and the item is still checked
-  4. User can add a custom checklist item that persists after reload
-  5. Clicking a checklist item opens a guide explaining the task, required documents, time needed, and (for authority tasks) a city-specific link based on the user's PLZ
-  6. A progress bar shows overall completion percentage; each category shows its own count (e.g., "Verträge: 2/5")
-**Plans**: TBD
+**Screens**:
+  - Home / Dashboard:
+    - Greeting + overall progress bar
+    - "Wusstest du schon?" card (rotating tips)
+    - Quick-action cards (Nächste Aufgabe, Zeitplan, Good to Know)
+    - Upcoming deadlines strip
+  - Checkliste screen:
+    - "Must-Do" section pinned at top (3–5 items)
+    - Categories: Organisatorisches, Verträge, Versicherungen, Einrichtung, Finanzen
+    - Each category collapsible, shows completion count
+    - Items checkable (mock state)
+    - "Eigenen Punkt hinzufügen" button
+  - Schritt-für-Schritt Anleitung detail (Ummeldung — fully written out):
+    - Task title + time estimate + required documents
+    - Numbered steps with explanations
+    - City-specific link (hardcoded for mock city)
+    - "Erledigt" / "Zurück" actions
+  - Anleitungen browser screen (standalone guide library):
+    - Sorted by category (Organisatorisches, Verträge, etc.)
+    - Each guide shown as card with title, time estimate, category tag
+    - Tapping opens the guide detail
+  - Übergabeprotokoll guide (photo checklist format)
+**Success Criteria**:
+  1. Dashboard shows progress bar + "Wusstest du schon?" card
+  2. Checklist shows all 5 categories with at least 4 mock items each — Must-Do pinned at top
+  3. Tapping a checklist item opens a guide detail screen
+  4. Ummeldung guide is fully written with all steps, required documents, and a mock link
+  5. Standalone Anleitungen browser shows guides sorted by category
+  6. Progress counts update visually when items are checked (mock state OK)
 **UI hint**: yes
 
-### Phase 3: Zeitplan, Good to Know & UX-Feinschliff
-**Goal**: Users can see all tasks organized on a move-relative timeline, browse tips and FAQ, and experience a polished mobile UX across the full app
+### Phase 3: Zeitplan, Good to Know & Feature Screens
+**Goal**: Complete the core navigation with timeline and FAQ screens, then build all the "extended feature" screens so the team can evaluate every feature in context
 **Mode**: mvp
 **Depends on**: Phase 2
 **Requirements**: TIME-01, TIME-02, GTK-01, GTK-02, GTK-03, GTK-04, GTK-05, UX-02
-**Success Criteria** (what must be TRUE):
-  1. Timeline screen groups all tasks into the correct buckets: 4+ Wochen vorher, 2–4 Wochen, 1 Woche, Am Umzugstag, Danach — and reflects the user's actual move date
-  2. User can open "Good to Know" and read FAQ answers about Rundfunkbeitrag, Ummeldungsfrist, and Kaution without leaving the app
-  3. Emergency contacts and Spartipps are visible in the "Good to Know" section
-  4. User can search for a checklist item or guide by keyword and get relevant results
-  5. The full app is usable on a 320px-wide screen — no horizontal scroll, no clipped text, no broken layouts
-**Plans**: TBD
+**Screens**:
+  - Zeitplan / Timeline:
+    - 5 time buckets: "4+ Wochen vorher", "2–4 Wochen", "1 Woche", "Am Umzugstag", "Danach"
+    - Mock tasks distributed across buckets based on move date
+    - Color-coded by urgency
+  - Good to Know hub:
+    - FAQ section (accordion, ~10 mock questions with answers)
+    - Notfallkontakte (Notruf 110/112, Giftnotruf, Energieversorger)
+    - Spartipps cards
+    - Adressänderungen checklist (employer, bank, Krankenkasse, subscriptions)
+  - Anbieter-Vergleich screen:
+    - Strom, Internet, Telefon tabs
+    - Mock provider cards with price, rating, CTA button ("Bei Check24 vergleichen")
+    - Commission badge ("Partnerangebot")
+  - KI Chatbot screen:
+    - Chat UI (bubbles, input field)
+    - 3 hardcoded example Q&A exchanges
+    - "Limit erreicht — Upgrade auf Premium" prompt for 4th question (Free tier)
+  - Dokumentenspeicher screen:
+    - Upload area + mock uploaded documents (Mietvertrag, Übergabeprotokoll)
+    - File list with name, date, type
+    - "Premium feature" lock indicator
+  - Moodboard screen:
+    - Pinterest-style grid with mock interior images
+    - "Bild hinzufügen" button
+    - "Mit Pinterest verknüpfen" option
+  - Einweihungsparty screen:
+    - Fun checklist (Einladungen, Getränke, Musik, etc.)
+    - Categorized under Good to Know
+  - Search results screen (UX-02):
+    - Search bar with mock autocomplete
+    - Results showing checklist items + guides
+**Success Criteria**:
+  1. Timeline screen shows all 5 time buckets with mock tasks in each
+  2. Good to Know shows FAQ accordion + emergency contacts + Spartipps — all tappable
+  3. KI Chatbot shows a functional-looking chat UI with 3 mock exchanges and a paywall prompt
+  4. Anbieter-Vergleich shows provider cards for Strom and Internet
+  5. Dokumentenspeicher shows upload UI and mock documents
+  6. Moodboard shows image grid
+  7. Search bar returns mock results
 **UI hint**: yes
 
-### Phase 4: Suche & Push-Benachrichtigungen (optional)
-**Goal**: Users can opt in to browser push notifications for upcoming deadlines — stretch goal only if Phase 3 ships ahead of schedule
+### Phase 4: Account, Premium & Kosteneinschätzung
+**Goal**: Complete the app with profile/settings screens and the premium paywall UI — then produce the cost estimation document for real development
 **Mode**: mvp
 **Depends on**: Phase 3
-**Requirements**: TIME-03
-**Success Criteria** (what must be TRUE):
-  1. User is prompted (opt-in) to enable browser push notifications
-  2. A test notification fires and is visible on the device
-**Plans**: TBD
+**Requirements**: TIME-03 (push opt-in UI), all UX polish
+**Screens**:
+  - Profil / Mein Umzug screen:
+    - User name (mock: "Lea")
+    - Move date, from/to cities, apartment size
+    - Edit button (opens mock edit form)
+    - Umzugsfortschritt summary
+  - Einstellungen screen:
+    - Benachrichtigungen (toggle, leads to Push opt-in UI)
+    - Sprache (DE mock)
+    - Datenschutz / Impressum links
+    - Account löschen (destructive action)
+  - Push Benachrichtigungen opt-in:
+    - Permission prompt mock-up
+    - Upcoming reminders list
+  - Premium Upgrade / Paywall screen:
+    - Free vs. Premium comparison table
+    - Features locked: KI Chatbot unlimited, Dokumentenspeicher, Listen sharen, kein Werbung
+    - Pricing mock (€2.99/month, €19.99/year)
+    - CTA "Jetzt upgraden"
+  - "Werbung" UI (Free version):
+    - Banner ad placeholder at bottom of checklist screen
+  - Profil-Tab added to bottom nav (5th icon)
+
+**Kosteneinschätzung document** (`COST-ESTIMATE.md`):
+  - Breakdown by component: Design, Frontend, Backend, iOS App, Android App, Content, Infrastructure
+  - Three scenarios: DIY/No-Code, Freelancer, Agency
+  - Ongoing costs (hosting, maintenance, customer support)
+  - Timeline estimates per scenario
+  - Recommendations for startup stage
+
+**Success Criteria**:
+  1. Profile screen shows mock user data with edit option
+  2. Settings screen has toggles for notifications + premium
+  3. Premium paywall shows clear Free/Premium feature comparison with pricing
+  4. Free-tier "Werbung" banner is visible on the checklist screen
+  5. COST-ESTIMATE.md is complete with all three scenarios
+  6. Full app navigation works end-to-end without dead ends
+**UI hint**: yes
 
 ## Progress
 
-**Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 (4 optional)
-
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 1. Foundation & Onboarding | 0/TBD | Not started | - |
-| 2. Checkliste & Anleitungen | 0/TBD | Not started | - |
-| 3. Zeitplan, Good to Know & UX-Feinschliff | 0/TBD | Not started | - |
-| 4. Suche & Push-Benachrichtigungen (optional) | 0/TBD | Not started | - |
+| Phase | Status | Completed |
+|-------|--------|-----------|
+| 1. Shell, Brand & Onboarding | Not started | - |
+| 2. Core App — Checkliste & Anleitungen | Not started | - |
+| 3. Zeitplan, Good to Know & Feature Screens | Not started | - |
+| 4. Account, Premium & Kosteneinschätzung | Not started | - |
