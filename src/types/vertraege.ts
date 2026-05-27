@@ -1,4 +1,4 @@
-export type VertragKategorie = 'strom' | 'internet' | 'telefon' | 'haftpflicht' | 'hausrat';
+﻿export type VertragKategorie = 'strom' | 'internet' | 'telefon' | 'haftpflicht' | 'hausrat';
 
 export interface Anbieter {
   id: string;
@@ -35,7 +35,7 @@ export interface Notfallkontakt {
   name: string;
   nummer: string;        // e.g. "110"
   iconName: string;      // Lucide icon name e.g. "Shield"
-  iconColor: string;     // hex e.g. "#1c2642"
+  iconColor: string;     // hex e.g. "#20314b"
 }
 
 export interface Adresspartei {

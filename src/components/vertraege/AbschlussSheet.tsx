@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { CheckCircle2, X } from 'lucide-react';
@@ -51,7 +51,7 @@ export function AbschlussSheet({ open, anbieter, onClose, onComplete }: Props) {
           aria-label="Schließen"
           className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center"
         >
-          <X size={24} color="#1c2642" />
+          <X size={24} color="#20314b" />
         </button>
 
         {/* Step content with key for fade-in remount */}

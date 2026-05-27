@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -142,7 +142,7 @@ export function SearchOverlay({ open, onClose }: Props) {
               aria-label="Schließen"
               className="absolute right-3 flex h-8 w-8 items-center justify-center"
             >
-              <X size={20} color="#1c2642" />
+              <X size={20} color="#20314b" />
             </button>
           </div>
 

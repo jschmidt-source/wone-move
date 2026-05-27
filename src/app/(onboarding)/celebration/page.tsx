@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -20,14 +20,14 @@ export default function CelebrationPage() {
         angle: 60,
         spread: 55,
         origin: { x: 0 },
-        colors: ['#646efb', '#d2d5fc', '#1c2642', '#ffffff'],
+        colors: ['#646efb', '#d2d5fc', '#20314b', '#ffffff'],
       });
       confetti({
         particleCount: 6,
         angle: 120,
         spread: 55,
         origin: { x: 1 },
-        colors: ['#646efb', '#d2d5fc', '#1c2642', '#ffffff'],
+        colors: ['#646efb', '#d2d5fc', '#20314b', '#ffffff'],
       });
 
       if (Date.now() < end) {
@@ -54,9 +54,9 @@ export default function CelebrationPage() {
       {/* Content — centered vertically */}
       <div className="flex flex-1 flex-col items-center justify-center text-center">
         {/* Emoji */}
-        <div className="mb-4 text-5xl">🎉</div>
+        <div className="mb-4 text-5xl">📦</div>
 
-        {/* Headline — 28px, bold, #1c2642 */}
+        {/* Headline — 28px, bold, #20314b */}
         <h1 className="text-[28px] font-bold leading-[1.2] text-foreground">
           Dein Umzugsplan ist fertig!
         </h1>

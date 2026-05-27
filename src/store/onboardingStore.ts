@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { OnboardingData, MovingOrg, Priority, AlreadyDone } from '@/types/onboarding';
+import { OnboardingData, Priority, AlreadyDone } from '@/types/onboarding';
 
 const initialData: OnboardingData = {
   moveDate: null,
   targetPlz: '',
   fromCity: '',
-  movingOrg: null,
+  movingOrg: [],
   priority: null,
   alreadyDone: {
     newApartment: false,
@@ -21,7 +21,7 @@ interface OnboardingStore {
   data: OnboardingData;
   setMoveDate: (date: string) => void;
   setLocation: (plz: string, city: string) => void;
-  setMovingOrg: (org: MovingOrg | null) => void;
+  setMovingOrg: (org: string[]) => void;
   setPriority: (priority: Priority | null) => void;
   setAlreadyDone: (key: keyof AlreadyDone, value: boolean) => void;
   complete: () => void;

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -24,7 +24,7 @@ function Toast({ message, onDismiss }: { message: string; onDismiss: () => void 
   return (
     <div
       className="fixed bottom-24 left-4 right-4 z-50 rounded-xl px-4 py-3 text-[14px] text-white shadow-lg"
-      style={{ backgroundColor: '#1c2642' }}
+      style={{ backgroundColor: '#20314b' }}
     >
       {message}
     </div>
@@ -89,8 +89,8 @@ export default function AufgabenPage() {
     const duration = 3000;
     const end = Date.now() + duration;
     const frame = () => {
-      confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#646efb', '#d2d5fc', '#1c2642', '#ffffff'] });
-      confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#646efb', '#d2d5fc', '#1c2642', '#ffffff'] });
+      confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#646efb', '#d2d5fc', '#20314b', '#ffffff'] });
+      confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#646efb', '#d2d5fc', '#20314b', '#ffffff'] });
       if (Date.now() < end) requestAnimationFrame(frame);
     };
     frame();

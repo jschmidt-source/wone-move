@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -48,46 +48,46 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* Wone MOVE Brand Tokens — #646efb primary, #1c2642 dark, #f6f7f7 background */
+/* Wone MOVE Brand Tokens — #6c75f4 primary, #20314b dark, #fcf6ec background */
 :root {
-  --background: #f6f7f7;
-  --foreground: #1c2642;
+  --background: #fcf6ec;
+  --foreground: #20314b;
   --card: #ffffff;
-  --card-foreground: #1c2642;
+  --card-foreground: #20314b;
   --popover: #ffffff;
-  --popover-foreground: #1c2642;
-  --primary: #646efb;             /* brand primary */
+  --popover-foreground: #20314b;
+  --primary: #6c75f4;             /* brand primary */
   --primary-foreground: #ffffff;
   --primary-light: #d2d5fc;
   --secondary: #d2d5fc;
-  --secondary-foreground: #1c2642;
-  --muted: #f6f7f7;
+  --secondary-foreground: #20314b;
+  --muted: #fcf6ec;
   --muted-foreground: #5b6377;
   --accent: #d2d5fc;
-  --accent-foreground: #1c2642;
+  --accent-foreground: #20314b;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: #d2d5fc;
   --input: #d2d5fc;
-  --ring: #646efb;
+  --ring: #6c75f4;
   --radius: 0.75rem;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: #f6f7f7;
-  --sidebar-foreground: #1c2642;
-  --sidebar-primary: #646efb;
+  --sidebar: #fcf6ec;
+  --sidebar-foreground: #20314b;
+  --sidebar-primary: #6c75f4;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #d2d5fc;
-  --sidebar-accent-foreground: #1c2642;
+  --sidebar-accent-foreground: #20314b;
   --sidebar-border: #d2d5fc;
-  --sidebar-ring: #646efb;
+  --sidebar-ring: #6c75f4;
 }
 
 .dark {
-  --background: #1c2642;
+  --background: #20314b;
   --foreground: #f6f7f7;
   --card: oklch(0.205 0 0);
   --card-foreground: #f6f7f7;
@@ -124,5 +124,14 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }

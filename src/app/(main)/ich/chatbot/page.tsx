@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -78,7 +78,7 @@ export default function ChatbotPage() {
           onClick={() => router.back()}
           className="flex h-[36px] w-[36px] items-center justify-center"
         >
-          <ChevronLeft size={24} color="#1c2642" />
+          <ChevronLeft size={24} color="#20314b" />
         </button>
         <h1 className="text-[16px] font-bold text-foreground">KI Chatbot</h1>
         <span className="ml-auto rounded-full bg-[#d2d5fc] px-2 py-0.5 text-[12px] font-bold" style={{ color: '#646efb' }}>

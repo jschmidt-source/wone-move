@@ -2,21 +2,59 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, HelpCircle, Phone, MapPin } from 'lucide-react';
-import { EntdeckenSection, EntdeckenPreviewCard } from '@/components/entdecken/EntdeckenSection';
+import { Search, BookOpen, HelpCircle, Lightbulb, Phone, MapPin, ChevronRight } from 'lucide-react';
 import { SearchOverlay } from '@/components/entdecken/SearchOverlay';
-import { FAQ } from '@/lib/faq';
-import { SPARTIPPS } from '@/lib/spartipps';
-import { NOTFALLKONTAKTE } from '@/lib/notfallkontakte';
-import { ADRESSAENDERUNGEN } from '@/lib/adressaenderungen';
+
+const SECTIONS = [
+  {
+    href: '/anleitungen',
+    icon: BookOpen,
+    iconBg: '#eef0fd',
+    iconColor: '#6c75f4',
+    title: 'Anleitungen',
+    description: 'Schritt-für-Schritt erklärt: Ummeldung, Rundfunk, Versicherungen & mehr',
+  },
+  {
+    href: '/entdecken/faq',
+    icon: HelpCircle,
+    iconBg: '#d2d5fc',
+    iconColor: '#6c75f4',
+    title: 'Häufige Fragen',
+    description: 'Antworten auf die wichtigsten Fragen rund um deinen Umzug',
+  },
+  {
+    href: '/entdecken/spartipps',
+    icon: Lightbulb,
+    iconBg: '#fef3c7',
+    iconColor: '#d97706',
+    title: 'Spartipps',
+    description: 'Kosten senken beim Umzug — praktische Tipps für jedes Budget',
+  },
+  {
+    href: '/entdecken/notfallkontakte',
+    icon: Phone,
+    iconBg: '#fee2e2',
+    iconColor: '#ef4444',
+    title: 'Notfallkontakte',
+    description: 'Wichtige Nummern für jede Situation — immer griffbereit',
+  },
+  {
+    href: '/entdecken/adressaenderungen',
+    icon: MapPin,
+    iconBg: '#dcfce7',
+    iconColor: '#16a34a',
+    title: 'Adressänderungen',
+    description: 'Wen musst du informieren? Die vollständige Checkliste',
+  },
+];
 
 export default function EntdeckenPage() {
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <div className="flex h-dvh flex-col bg-background">
-      {/* Sticky search bar (D-08) — height 56px, bg matches page */}
-      <div className="sticky top-0 z-40 bg-background px-4 py-1.5">
+      {/* Sticky search bar */}
+      <div className="sticky top-0 z-40 bg-background px-4 py-2">
         <button
           type="button"
           onClick={() => setSearchOpen(true)}
@@ -28,83 +66,34 @@ export default function EntdeckenPage() {
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 pt-4 pb-4">
-        <h1 className="text-[20px] font-bold leading-[1.3] text-foreground">Entdecken</h1>
+      <div className="flex-1 overflow-y-auto px-4 pt-2 pb-6">
+        <h1 className="mb-4 text-[20px] font-bold leading-[1.3] text-foreground">Entdecken</h1>
 
-        <div className="mt-6 flex flex-col gap-6">
-          {/* Section 1: Anleitungen — D-09: link to existing /anleitungen route from Phase 2 */}
-          <EntdeckenSection title="Anleitungen" allHref="/anleitungen">
-            {[
-              { slug: 'ummeldung', label: 'Organisatorisches', dot: '#646efb', title: 'Ummeldung beim Bürgeramt', time: '~15 Min', diff: 'Mittel' },
-              { slug: 'rundfunk', label: 'Organisatorisches', dot: '#646efb', title: 'Rundfunkbeitrag anmelden', time: '~5 Min', diff: 'Leicht' },
-              { slug: 'nachsende', label: 'Finanzen', dot: '#22c55e', title: 'Nachsendeauftrag stellen', time: '~10 Min', diff: 'Leicht' },
-            ].map((g) => (
-              <Link key={g.slug} href={`/anleitungen/${g.slug}`} className="contents">
-                <EntdeckenPreviewCard>
-                  <div className="flex items-center gap-1">
-                    <span className="h-2 w-2 rounded-full" style={{ background: g.dot }} />
-                    <span className="text-[14px] font-bold text-muted-foreground">{g.label}</span>
-                  </div>
-                  <p className="mt-2 line-clamp-2 text-[16px] font-bold leading-[1.3] text-foreground">{g.title}</p>
-                  <div className="mt-3 flex gap-2">
-                    <span className="rounded-full bg-background px-2 py-0.5 text-[14px] font-bold text-muted-foreground">{g.time}</span>
-                    <span className="rounded-full bg-background px-2 py-0.5 text-[14px] font-bold text-muted-foreground">{g.diff}</span>
-                  </div>
-                </EntdeckenPreviewCard>
-              </Link>
-            ))}
-          </EntdeckenSection>
+        <div className="flex flex-col gap-3">
+          {SECTIONS.map((s) => (
+            <Link key={s.href} href={s.href} className="block">
+              <div className="flex items-center gap-4 rounded-[16px] bg-white px-4 py-4 active:opacity-80">
+                {/* Icon */}
+                <div
+                  className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-[12px]"
+                  style={{ backgroundColor: s.iconBg }}
+                >
+                  <s.icon size={22} color={s.iconColor} />
+                </div>
 
-          {/* Section 2: Häufige Fragen */}
-          <EntdeckenSection title="Häufige Fragen" allHref="/entdecken/faq">
-            {FAQ.slice(0, 3).map((q) => (
-              <Link key={q.id} href="/entdecken/faq" className="contents">
-                <EntdeckenPreviewCard>
-                  <HelpCircle size={16} className="text-primary" />
-                  <p className="mt-2 line-clamp-3 text-[14px] font-bold leading-[1.4] text-foreground">{q.frage}</p>
-                </EntdeckenPreviewCard>
-              </Link>
-            ))}
-          </EntdeckenSection>
+                {/* Text */}
+                <div className="min-w-0 flex-1">
+                  <p className="text-[15px] font-bold text-foreground">{s.title}</p>
+                  <p className="mt-0.5 text-[13px] font-normal leading-[1.4] text-muted-foreground line-clamp-2">
+                    {s.description}
+                  </p>
+                </div>
 
-          {/* Section 3: Spartipps */}
-          <EntdeckenSection title="Spartipps" allHref="/entdecken/spartipps">
-            {SPARTIPPS.slice(0, 3).map((cat) => (
-              <Link key={cat.id} href="/entdecken/spartipps" className="contents">
-                <EntdeckenPreviewCard>
-                  <span className="text-[20px]">{cat.emoji}</span>
-                  <p className="mt-1 text-[14px] font-bold text-foreground">{cat.label}</p>
-                  <p className="mt-1 text-[14px] font-normal text-muted-foreground">{cat.tipps.length} Tipps</p>
-                </EntdeckenPreviewCard>
-              </Link>
-            ))}
-          </EntdeckenSection>
-
-          {/* Section 4: Notfallkontakte */}
-          <EntdeckenSection title="Notfallkontakte" allHref="/entdecken/notfallkontakte">
-            {NOTFALLKONTAKTE.slice(0, 3).map((n) => (
-              <Link key={n.id} href="/entdecken/notfallkontakte" className="contents">
-                <EntdeckenPreviewCard>
-                  <Phone size={16} className="text-[#ef4444]" />
-                  <p className="mt-2 text-[14px] font-bold text-foreground">{n.name}</p>
-                  <p className="mt-1 text-[20px] font-bold text-foreground">{n.nummer}</p>
-                </EntdeckenPreviewCard>
-              </Link>
-            ))}
-          </EntdeckenSection>
-
-          {/* Section 5: Adressänderungen */}
-          <EntdeckenSection title="Adressänderungen" allHref="/entdecken/adressaenderungen">
-            {ADRESSAENDERUNGEN.slice(0, 3).map((a) => (
-              <Link key={a.id} href="/entdecken/adressaenderungen" className="contents">
-                <EntdeckenPreviewCard>
-                  <MapPin size={16} className="text-muted-foreground" />
-                  <p className="mt-2 text-[14px] font-bold text-foreground">{a.label}</p>
-                  <p className="mt-1 text-[14px] font-normal text-primary">Jetzt checken</p>
-                </EntdeckenPreviewCard>
-              </Link>
-            ))}
-          </EntdeckenSection>
+                {/* Arrow */}
+                <ChevronRight size={18} color="#5b6377" className="shrink-0" />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 

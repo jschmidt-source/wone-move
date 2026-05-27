@@ -69,7 +69,8 @@ export function filterTasks(
   const visible = tasks.filter((t) => {
     if (!t.filterRules) return true;
     for (const rule of t.filterRules) {
-      if (rule.kind === 'hideIfMovingOrgFirma' && data.movingOrg === 'firma') {
+      const isFirma = Array.isArray(data.movingOrg) ? data.movingOrg.includes('firma') : data.movingOrg === 'firma';
+      if (rule.kind === 'hideIfMovingOrgFirma' && isFirma) {
         return false;
       }
       if (rule.kind === 'preCheckIfAlreadyDone' && data.alreadyDone[rule.key]) {

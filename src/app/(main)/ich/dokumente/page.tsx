@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRouter } from 'next/navigation';
 import { ChevronLeft, FileText, Lock, ChevronRight } from 'lucide-react';
@@ -21,7 +21,7 @@ export default function DokumentePage() {
           onClick={() => router.back()}
           className="flex h-[36px] w-[36px] items-center justify-center"
         >
-          <ChevronLeft size={24} color="#1c2642" />
+          <ChevronLeft size={24} color="#20314b" />
         </button>
         <h1 className="text-[16px] font-bold text-foreground">Dokumentenspeicher</h1>
       </div>

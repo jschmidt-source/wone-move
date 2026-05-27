@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -15,7 +15,7 @@ function Toast({ message, onDone }: { message: string; onDone: () => void }) {
   return (
     <div
       className="fixed bottom-6 left-4 right-4 z-50 rounded-[12px] px-4 py-3 text-[14px] font-bold text-white"
-      style={{ backgroundColor: '#1c2642', boxShadow: '0 4px 16px rgba(28,38,66,0.2)' }}
+      style={{ backgroundColor: '#20314b', boxShadow: '0 4px 16px rgba(28,38,66,0.2)' }}
     >
       {message}
     </div>
@@ -127,7 +127,7 @@ export default function EinstellungenPage() {
           onClick={() => router.back()}
           className="flex h-[36px] w-[36px] items-center justify-center"
         >
-          <ChevronLeft size={24} color="#1c2642" />
+          <ChevronLeft size={24} color="#20314b" />
         </button>
         <h1 className="text-[16px] font-bold text-foreground">Einstellungen</h1>
       </div>

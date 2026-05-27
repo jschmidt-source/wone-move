@@ -1,7 +1,7 @@
-import { Notfallkontakt } from '@/types/vertraege';
+﻿import { Notfallkontakt } from '@/types/vertraege';
 
 export const NOTFALLKONTAKTE: Notfallkontakt[] = [
-  { id: 'polizei',  name: 'Polizei',                   nummer: '110',            iconName: 'Shield',      iconColor: '#1c2642' },
+  { id: 'polizei',  name: 'Polizei',                   nummer: '110',            iconName: 'Shield',      iconColor: '#20314b' },
   { id: 'feuerwehr', name: 'Feuerwehr / Rettung',      nummer: '112',            iconName: 'Flame',       iconColor: '#ef4444' },
   { id: 'gift',     name: 'Giftnotruf',                 nummer: '030 19240',      iconName: 'AlertCircle', iconColor: '#f97316' },
   { id: 'energie',  name: 'Energieversorger Notfall',   nummer: '0800 100 100 2', iconName: 'Zap',         iconColor: '#f59e0b' },

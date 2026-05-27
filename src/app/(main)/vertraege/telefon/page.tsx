@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -36,7 +36,7 @@ export default function TelefonPage() {
               aria-label="Zurück"
               className="flex h-8 w-8 items-center justify-center"
             >
-              <ChevronLeft size={24} color="#1c2642" />
+              <ChevronLeft size={24} color="#20314b" />
             </button>
             <h1 className="flex-1 text-[20px] font-bold text-foreground">
               {meta.headerTitle}

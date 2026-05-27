@@ -1,5 +1,7 @@
-'use client';
+﻿'use client';
 
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import { Task } from '@/types/checklist';
 import { ChecklistItem } from './ChecklistItem';
 
@@ -11,29 +13,64 @@ interface Props {
 }
 
 export function MustDoSection({ tasks, isChecked, onToggle, onNavigate }: Props) {
+  const [collapsed, setCollapsed] = useState(false);
   if (tasks.length === 0) return null;
+
+  const doneCount = tasks.filter((t) => isChecked(t.id)).length;
+
   return (
-    <div className="overflow-hidden rounded-[12px] border border-[#fecaca] bg-white">
-      <div className="flex h-[52px] items-center justify-between gap-2 border-b border-[#d2d5fc] px-4">
-        <span className="text-[14px] font-bold text-foreground">Muss erledigt werden</span>
-        <span
-          className="rounded-full px-2 py-1 text-[14px] font-bold"
-          style={{ backgroundColor: '#ef4444', color: '#ffffff' }}
-        >
-          Must-Do
-        </span>
-      </div>
-      <div className="flex flex-col">
-        {tasks.map((t) => (
-          <ChecklistItem
-            key={t.id}
-            task={t}
-            checked={isChecked(t.id)}
-            onToggle={onToggle}
-            onNavigate={onNavigate}
+    <div
+      className="overflow-hidden rounded-[12px] bg-white"
+      style={{ border: '1.5px solid #20314b' }}
+    >
+      <button
+        type="button"
+        onClick={() => setCollapsed(!collapsed)}
+        className="flex h-[52px] w-full items-center justify-between gap-2 px-4"
+        style={{ borderBottom: collapsed ? 'none' : '1px solid #d2d5fc' }}
+      >
+        {/* Left: WICHTIG badge + counter */}
+        <div className="flex items-center gap-2">
+          <span
+            className="rounded-[6px] px-2 py-0.5 text-[12px] font-bold tracking-wide text-white"
+            style={{ backgroundColor: '#20314b' }}
+          >
+            WICHTIG
+          </span>
+          <span className="text-[13px] font-normal text-muted-foreground">
+            {doneCount}/{tasks.length} erledigt
+          </span>
+        </div>
+
+        {/* Right: Must-Do tag + chevron */}
+        <div className="flex items-center gap-2">
+          <span
+            className="rounded-full px-2 py-0.5 text-[12px] font-bold"
+            style={{ backgroundColor: '#fee2e2', color: '#ef4444' }}
+          >
+            Must-Do
+          </span>
+          <ChevronDown
+            size={18}
+            color="#5b6377"
+            style={{ transform: collapsed ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}
           />
-        ))}
-      </div>
+        </div>
+      </button>
+
+      {!collapsed && (
+        <div className="flex flex-col">
+          {tasks.map((t) => (
+            <ChecklistItem
+              key={t.id}
+              task={t}
+              checked={isChecked(t.id)}
+              onToggle={onToggle}
+              onNavigate={onNavigate}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
